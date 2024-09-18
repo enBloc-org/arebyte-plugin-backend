@@ -11,8 +11,7 @@
         "fields": [
           "bio",
           "projects",
-          "followers",
-          "user_id"
+          "followers"
         ]
       },
       "conditions": [
@@ -46,7 +45,7 @@
           "bio",
           "projects",
           "followers",
-          "user_id"
+          "admin_user"
         ]
       },
       "conditions": [
@@ -62,7 +61,7 @@
           "bio",
           "projects",
           "followers",
-          "user_id"
+          "admin_user"
         ]
       },
       "conditions": [
@@ -76,10 +75,9 @@
       "properties": {
         "fields": [
           "title",
-          "pieces.title",
-          "pieces.media",
-          "pieces.description",
-          "project"
+          "in_project",
+          "pop_ups",
+          "event_description"
         ]
       },
       "conditions": [
@@ -111,13 +109,13 @@
       "properties": {
         "fields": [
           "title",
-          "pieces.title",
-          "pieces.media",
-          "pieces.description",
-          "project"
+          "in_project",
+          "pop_ups",
+          "event_description"
         ]
       },
       "conditions": [
+        "admin::is-creator",
         "admin::has-same-role-as-creator"
       ]
     },
@@ -128,10 +126,79 @@
       "properties": {
         "fields": [
           "title",
-          "pieces.title",
-          "pieces.media",
-          "pieces.description",
-          "project"
+          "in_project",
+          "pop_ups",
+          "event_description"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "title",
+          "media",
+          "description",
+          "popup_size",
+          "popup_position"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "title",
+          "media",
+          "description",
+          "popup_size",
+          "popup_position"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator",
+        "admin::has-same-role-as-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "title",
+          "media",
+          "description",
+          "popup_size",
+          "popup_position"
         ]
       },
       "conditions": [
@@ -204,6 +271,69 @@
           "cover_image",
           "content_creator",
           "events"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role"
         ]
       },
       "conditions": [

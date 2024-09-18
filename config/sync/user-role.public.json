@@ -16,6 +16,18 @@
       "action": "api::event.event.findOne"
     },
     {
+      "action": "api::pop-up.pop-up.find"
+    },
+    {
+      "action": "api::pop-up.pop-up.findOne"
+    },
+    {
+      "action": "api::project.project.find"
+    },
+    {
+      "action": "api::project.project.findOne"
+    },
+    {
       "action": "plugin::users-permissions.auth.callback"
     },
     {

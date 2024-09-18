@@ -1,7 +1,7 @@
 {
   "name": "Arebyte Admin",
   "code": "strapi-author",
-  "description": "Authors can manage the content they have created.",
+  "description": "Arebyte team to manage and moderate content",
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
@@ -12,8 +12,7 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "followed_artists",
-          "user_id"
+          "followed_artists"
         ]
       },
       "conditions": []
@@ -41,8 +40,7 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "followed_artists",
-          "user_id"
+          "followed_artists"
         ]
       },
       "conditions": []
@@ -56,8 +54,7 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "followed_artists",
-          "user_id"
+          "followed_artists"
         ]
       },
       "conditions": []
@@ -70,8 +67,7 @@
         "fields": [
           "bio",
           "projects",
-          "followers",
-          "user_id"
+          "followers"
         ]
       },
       "conditions": []
@@ -98,8 +94,7 @@
         "fields": [
           "bio",
           "projects",
-          "followers",
-          "user_id"
+          "followers"
         ]
       },
       "conditions": []
@@ -112,8 +107,7 @@
         "fields": [
           "bio",
           "projects",
-          "followers",
-          "user_id"
+          "followers"
         ]
       },
       "conditions": []
@@ -124,11 +118,7 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title",
-          "pieces.title",
-          "pieces.media",
-          "pieces.description",
-          "project"
+          "title"
         ]
       },
       "conditions": []
@@ -153,11 +143,7 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title",
-          "pieces.title",
-          "pieces.media",
-          "pieces.description",
-          "project"
+          "title"
         ]
       },
       "conditions": []
@@ -168,11 +154,7 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title",
-          "pieces.title",
-          "pieces.media",
-          "pieces.description",
-          "project"
+          "title"
         ]
       },
       "conditions": []

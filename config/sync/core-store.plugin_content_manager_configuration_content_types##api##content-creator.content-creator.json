@@ -63,17 +63,17 @@
           "sortable": false
         }
       },
-      "user_id": {
+      "admin_user": {
         "edit": {
-          "label": "user_id",
+          "label": "admin_user",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true,
-          "mainField": "username"
+          "mainField": "firstname"
         },
         "list": {
-          "label": "user_id",
+          "label": "admin_user",
           "searchable": true,
           "sortable": true
         }
@@ -142,7 +142,7 @@
         "id",
         "projects",
         "followers",
-        "user_id"
+        "admin_user"
       ],
       "edit": [
         [
@@ -163,7 +163,7 @@
         ],
         [
           {
-            "name": "user_id",
+            "name": "admin_user",
             "size": 6
           }
         ]

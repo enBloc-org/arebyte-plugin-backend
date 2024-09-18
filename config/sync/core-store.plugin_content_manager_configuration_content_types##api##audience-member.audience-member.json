@@ -84,7 +84,7 @@
           "placeholder": "",
           "visible": true,
           "editable": true,
-          "mainField": "firstname"
+          "mainField": "username"
         },
         "list": {
           "label": "user_id",
