@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pop_ups",
+  "info": {
+    "singularName": "pop-up",
+    "pluralName": "pop-ups",
+    "displayName": "pop up",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "blocks",
+      "required": false
+    },
+    "popup_size": {
+      "type": "enumeration",
+      "enum": [
+        "Original (size of the image)",
+        "Small ",
+        "Medium ",
+        "Large "
+      ],
+      "required": true
+    },
+    "popup_position": {
+      "type": "enumeration",
+      "enum": [
+        "Top Left",
+        "Top center",
+        "Top right",
+        "Center left",
+        "Center",
+        "Center right",
+        "Bottom left",
+        "Bottom center",
+        "Bottom Right"
+      ]
+    }
+  }
+}

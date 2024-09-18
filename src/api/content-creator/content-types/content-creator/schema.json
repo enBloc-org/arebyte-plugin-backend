@@ -28,10 +28,10 @@
       "target": "api::audience-member.audience-member",
       "mappedBy": "followed_artists"
     },
-    "user_id": {
+    "admin_user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "target": "admin::user"
     }
   }
 }

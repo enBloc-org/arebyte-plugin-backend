@@ -742,7 +742,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -862,10 +861,10 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
       'manyToMany',
       'api::audience-member.audience-member'
     >;
-    user_id: Attribute.Relation<
+    admin_user: Attribute.Relation<
       'api::content-creator.content-creator',
       'oneToOne',
-      'plugin::users-permissions.user'
+      'admin::user'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -898,12 +897,17 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    pieces: Attribute.Component<'piece.piece', true>;
-    project: Attribute.Relation<
+    in_project: Attribute.Relation<
       'api::event.event',
       'manyToOne',
       'api::project.project'
     >;
+    pop_ups: Attribute.Relation<
+      'api::event.event',
+      'oneToMany',
+      'api::pop-up.pop-up'
+    >;
+    event_description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -915,6 +919,57 @@ export interface ApiEventEvent extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::event.event',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPopUpPopUp extends Schema.CollectionType {
+  collectionName: 'pop_ups';
+  info: {
+    singularName: 'pop-up';
+    pluralName: 'pop-ups';
+    displayName: 'pop up';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    description: Attribute.Blocks;
+    popup_size: Attribute.Enumeration<
+      ['Original (size of the image)', 'Small ', 'Medium ', 'Large ']
+    > &
+      Attribute.Required;
+    popup_position: Attribute.Enumeration<
+      [
+        'Top Left',
+        'Top center',
+        'Top right',
+        'Center left',
+        'Center',
+        'Center right',
+        'Bottom left',
+        'Bottom center',
+        'Bottom Right'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::pop-up.pop-up',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::pop-up.pop-up',
       'oneToOne',
       'admin::user'
     > &
@@ -987,6 +1042,7 @@ declare module '@strapi/types' {
       'api::audience-member.audience-member': ApiAudienceMemberAudienceMember;
       'api::content-creator.content-creator': ApiContentCreatorContentCreator;
       'api::event.event': ApiEventEvent;
+      'api::pop-up.pop-up': ApiPopUpPopUp;
       'api::project.project': ApiProjectProject;
     }
   }
