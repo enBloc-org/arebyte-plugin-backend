@@ -1,0 +1,16 @@
+meta {
+  name: get_single_project
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:1337/api/projects/1
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 403
+  res.body.data: isDefined
+}

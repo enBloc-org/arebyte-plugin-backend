@@ -1,0 +1,16 @@
+meta {
+  name: get_all_projects
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:1337/api/projects
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+  res.body.data: isDefined
+}
