@@ -4,7 +4,7 @@
   "info": {
     "singularName": "content-creator",
     "pluralName": "content-creators",
-    "displayName": "content_creator",
+    "displayName": "Creator Profile",
     "description": ""
   },
   "options": {
@@ -22,16 +22,8 @@
       "target": "api::project.project",
       "mappedBy": "content_creator"
     },
-    "followers": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::audience-member.audience-member",
-      "mappedBy": "followed_artists"
-    },
-    "admin_user": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "admin::user"
+    "artist_name": {
+      "type": "string"
     }
   }
 }

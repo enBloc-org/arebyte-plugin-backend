@@ -810,11 +810,6 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
     event_time: Attribute.Time &
       Attribute.Required &
       Attribute.DefaultTo<'12:00'>;
-    followed_artists: Attribute.Relation<
-      'api::audience-member.audience-member',
-      'manyToMany',
-      'api::content-creator.content-creator'
-    >;
     user_id: Attribute.Relation<
       'api::audience-member.audience-member',
       'oneToOne',
@@ -843,7 +838,7 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
   info: {
     singularName: 'content-creator';
     pluralName: 'content-creators';
-    displayName: 'content_creator';
+    displayName: 'Creator Profile';
     description: '';
   };
   options: {
@@ -856,16 +851,7 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
       'oneToMany',
       'api::project.project'
     >;
-    followers: Attribute.Relation<
-      'api::content-creator.content-creator',
-      'manyToMany',
-      'api::audience-member.audience-member'
-    >;
-    admin_user: Attribute.Relation<
-      'api::content-creator.content-creator',
-      'oneToOne',
-      'admin::user'
-    >;
+    artist_name: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
