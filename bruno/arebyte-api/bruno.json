@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "arebyte-api",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
