@@ -48,32 +48,16 @@
           "sortable": false
         }
       },
-      "followers": {
+      "artist_name": {
         "edit": {
-          "label": "followers",
+          "label": "artist_name",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true,
-          "mainField": "id"
+          "editable": true
         },
         "list": {
-          "label": "followers",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "admin_user": {
-        "edit": {
-          "label": "admin_user",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "firstname"
-        },
-        "list": {
-          "label": "admin_user",
+          "label": "artist_name",
           "searchable": true,
           "sortable": true
         }
@@ -138,13 +122,13 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "projects",
-        "followers",
-        "admin_user"
-      ],
       "edit": [
+        [
+          {
+            "name": "artist_name",
+            "size": 6
+          }
+        ],
         [
           {
             "name": "bio",
@@ -155,18 +139,13 @@
           {
             "name": "projects",
             "size": 6
-          },
-          {
-            "name": "followers",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "admin_user",
-            "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "projects",
+        "artist_name"
       ]
     },
     "uid": "api::content-creator.content-creator"

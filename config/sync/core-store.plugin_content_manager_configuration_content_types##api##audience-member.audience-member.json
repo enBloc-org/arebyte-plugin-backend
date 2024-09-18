@@ -62,21 +62,6 @@
           "sortable": true
         }
       },
-      "followed_artists": {
-        "edit": {
-          "label": "followed_artists",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "id"
-        },
-        "list": {
-          "label": "followed_artists",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "user_id": {
         "edit": {
           "label": "user_id",
@@ -173,10 +158,6 @@
           {
             "name": "event_time",
             "size": 4
-          },
-          {
-            "name": "followed_artists",
-            "size": 6
           }
         ],
         [

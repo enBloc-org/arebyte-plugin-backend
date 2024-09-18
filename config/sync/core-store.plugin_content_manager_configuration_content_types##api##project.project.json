@@ -192,10 +192,6 @@
           {
             "name": "launch_date",
             "size": 4
-          },
-          {
-            "name": "content_creator",
-            "size": 6
           }
         ]
       ],

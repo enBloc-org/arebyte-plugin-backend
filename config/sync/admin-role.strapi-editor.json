@@ -11,7 +11,7 @@
         "fields": [
           "bio",
           "projects",
-          "followers"
+          "artist_name"
         ]
       },
       "conditions": [
@@ -44,12 +44,11 @@
         "fields": [
           "bio",
           "projects",
-          "followers",
-          "admin_user"
+          "artist_name"
         ]
       },
       "conditions": [
-        "admin::has-same-role-as-creator"
+        "admin::is-creator"
       ]
     },
     {
@@ -60,8 +59,7 @@
         "fields": [
           "bio",
           "projects",
-          "followers",
-          "admin_user"
+          "artist_name"
         ]
       },
       "conditions": [
@@ -115,8 +113,7 @@
         ]
       },
       "conditions": [
-        "admin::is-creator",
-        "admin::has-same-role-as-creator"
+        "admin::is-creator"
       ]
     },
     {
@@ -184,8 +181,7 @@
         ]
       },
       "conditions": [
-        "admin::is-creator",
-        "admin::has-same-role-as-creator"
+        "admin::is-creator"
       ]
     },
     {
@@ -256,7 +252,7 @@
         ]
       },
       "conditions": [
-        "admin::has-same-role-as-creator"
+        "admin::is-creator"
       ]
     },
     {
@@ -271,69 +267,6 @@
           "cover_image",
           "content_creator",
           "events"
-        ]
-      },
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "plugin::users-permissions.user",
-      "properties": {
-        "fields": [
-          "username",
-          "email",
-          "provider",
-          "password",
-          "resetPasswordToken",
-          "confirmationToken",
-          "confirmed",
-          "blocked",
-          "role"
-        ]
-      },
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "plugin::users-permissions.user",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "plugin::users-permissions.user",
-      "properties": {
-        "fields": [
-          "username",
-          "email"
-        ]
-      },
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "plugin::users-permissions.user",
-      "properties": {
-        "fields": [
-          "username",
-          "email",
-          "provider",
-          "password",
-          "resetPasswordToken",
-          "confirmationToken",
-          "confirmed",
-          "blocked",
-          "role"
         ]
       },
       "conditions": [

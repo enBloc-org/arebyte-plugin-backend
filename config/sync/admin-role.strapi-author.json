@@ -11,8 +11,7 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time",
-          "followed_artists"
+          "event_time"
         ]
       },
       "conditions": []
@@ -39,8 +38,7 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time",
-          "followed_artists"
+          "event_time"
         ]
       },
       "conditions": []
@@ -53,8 +51,7 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time",
-          "followed_artists"
+          "event_time"
         ]
       },
       "conditions": []
@@ -66,8 +63,7 @@
       "properties": {
         "fields": [
           "bio",
-          "projects",
-          "followers"
+          "projects"
         ]
       },
       "conditions": []
@@ -93,8 +89,7 @@
       "properties": {
         "fields": [
           "bio",
-          "projects",
-          "followers"
+          "projects"
         ]
       },
       "conditions": []
@@ -106,8 +101,7 @@
       "properties": {
         "fields": [
           "bio",
-          "projects",
-          "followers"
+          "projects"
         ]
       },
       "conditions": []
