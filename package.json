@@ -1,17 +1,19 @@
 {
   "name": "arebyte-plugin-backend",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "A CMS for the Arebyte plugin",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
   "scripts": {
+    "build": "strapi build",
+    "deploy": "strapi deploy",
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
     "strapi": "strapi",
-    "deploy": "strapi deploy"
-  },
-  "devDependencies": {
-    "@usebruno/cli": "^1.29.0"
+    "test": "cd bruno && npx bru run"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "4.25.11",
@@ -24,15 +26,14 @@
     "react-router-dom": "5.3.4",
     "styled-components": "5.3.3"
   },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "f528a0a3-5cb7-47bc-9aef-bf6e6b87957e"
+  "devDependencies": {
+    "@usebruno/cli": "^1.29.0"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "f528a0a3-5cb7-47bc-9aef-bf6e6b87957e"
+  }
 }
