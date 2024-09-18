@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "content_creators",
+  "info": {
+    "singularName": "content-creator",
+    "pluralName": "content-creators",
+    "displayName": "content_creator",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bio": {
+      "type": "blocks",
+      "required": true
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "content_creator"
+    },
+    "followers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::audience-member.audience-member",
+      "mappedBy": "followed_artists"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
