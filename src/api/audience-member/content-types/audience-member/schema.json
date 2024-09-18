@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audience_members",
+  "info": {
+    "singularName": "audience-member",
+    "pluralName": "audience-members",
+    "displayName": "audience_member",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "is_quiet": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "playlist": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project"
+    },
+    "event_time": {
+      "type": "time",
+      "required": true,
+      "default": "12:00",
+      "unique": false
+    },
+    "followed_artists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::content-creator.content-creator",
+      "inversedBy": "followers"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}

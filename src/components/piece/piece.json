@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_piece_pieces",
+  "info": {
+    "displayName": "piece",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}
