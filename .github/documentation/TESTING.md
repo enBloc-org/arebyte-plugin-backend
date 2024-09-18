@@ -1,5 +1,7 @@
 ## Setup
 
+### Opening our tests in Bruno
+
 This codebase uses [bruno](https://docs.usebruno.com/testing/introduction) to test all endpoints which are exposed to the frontend.
 
 In order to allow for automation and help us avoid regression we have integrated all tests into the code base. You can access all test scripts directly in your IDE or through the Bruno app.
@@ -15,6 +17,12 @@ To access all tests from within Bruno:
 - a new collection called `arebyte-api` will be displayed in Bruno
 
   ![arebyte collection displayed](./images/arebyte-api-collection.png)
+
+### Environment Variables
+
+Inside the `bruno` directory you will find a `.env.example` file. Use this to create a `.env` in the same folder and then fill in the value with your own `jwt` token.
+
+You can retrieve your token by following the steps in the official documentation [here](https://strapi.io/blog/guide-on-authenticating-requests-with-the-rest-api)
 
 ## Editing tests
 
