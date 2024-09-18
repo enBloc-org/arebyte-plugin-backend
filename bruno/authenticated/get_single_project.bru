@@ -7,11 +7,10 @@ meta {
 get {
   url: {{host}}/api/projects/1
   body: none
-  auth: none
 }
 
 headers {
-  Authorization: bearer
+  Authorization: bearer {{jwtToken}}
 }
 
 assert {

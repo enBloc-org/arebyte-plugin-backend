@@ -13,7 +13,7 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
-    "test": "cd bruno && npx bru run"
+    "test": "cd bruno && npx bru run --env local"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "4.25.11",
