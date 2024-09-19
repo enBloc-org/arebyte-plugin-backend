@@ -74,8 +74,7 @@
         "fields": [
           "title",
           "in_project",
-          "pop_ups",
-          "event_description"
+          "pop_ups"
         ]
       },
       "conditions": [
@@ -108,8 +107,7 @@
         "fields": [
           "title",
           "in_project",
-          "pop_ups",
-          "event_description"
+          "pop_ups"
         ]
       },
       "conditions": [
@@ -124,8 +122,7 @@
         "fields": [
           "title",
           "in_project",
-          "pop_ups",
-          "event_description"
+          "pop_ups"
         ]
       },
       "conditions": [
@@ -138,11 +135,11 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
           "media",
           "description",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "work_title"
         ]
       },
       "conditions": [
@@ -173,11 +170,11 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
           "media",
           "description",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "work_title"
         ]
       },
       "conditions": [
@@ -190,11 +187,11 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
           "media",
           "description",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "work_title"
         ]
       },
       "conditions": [

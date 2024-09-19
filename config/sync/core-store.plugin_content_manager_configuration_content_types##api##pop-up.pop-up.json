@@ -6,8 +6,8 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
-      "defaultSortBy": "title",
+      "mainField": "work_title",
+      "defaultSortBy": "work_title",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -19,16 +19,16 @@
           "sortable": true
         }
       },
-      "title": {
+      "work_title": {
         "edit": {
-          "label": "title",
+          "label": "work_title",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "title",
+          "label": "work_title",
           "searchable": true,
           "sortable": true
         }
@@ -85,6 +85,62 @@
         },
         "list": {
           "label": "popup_position",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "exeternal_link": {
+        "edit": {
+          "label": "exeternal_link",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "exeternal_link",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "artist_name": {
+        "edit": {
+          "label": "artist_name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "artist_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "creation_date": {
+        "edit": {
+          "label": "creation_date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "creation_date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "medium": {
+        "edit": {
+          "label": "medium",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "medium",
           "searchable": true,
           "sortable": true
         }
@@ -149,16 +205,30 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "title",
-        "media",
-        "createdAt"
-      ],
       "edit": [
         [
           {
-            "name": "title",
+            "name": "work_title",
+            "size": 6
+          },
+          {
+            "name": "artist_name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "creation_date",
+            "size": 6
+          },
+          {
+            "name": "exeternal_link",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "medium",
             "size": 6
           },
           {
@@ -182,6 +252,12 @@
             "size": 6
           }
         ]
+      ],
+      "list": [
+        "id",
+        "media",
+        "createdAt",
+        "work_title"
       ]
     },
     "uid": "api::pop-up.pop-up"

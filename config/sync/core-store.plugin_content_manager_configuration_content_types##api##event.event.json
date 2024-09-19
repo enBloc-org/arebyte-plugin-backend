@@ -55,24 +55,10 @@
           "placeholder": "",
           "visible": true,
           "editable": true,
-          "mainField": "title"
+          "mainField": "work_title"
         },
         "list": {
           "label": "pop_ups",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "event_description": {
-        "edit": {
-          "label": "event_description",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "event_description",
           "searchable": false,
           "sortable": false
         }
@@ -137,17 +123,17 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "title",
+        "createdAt",
+        "pop_ups"
+      ],
       "edit": [
         [
           {
             "name": "title",
             "size": 6
-          }
-        ],
-        [
-          {
-            "name": "event_description",
-            "size": 12
           }
         ],
         [
@@ -160,12 +146,6 @@
             "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "title",
-        "createdAt",
-        "pop_ups"
       ]
     },
     "uid": "api::event.event"
