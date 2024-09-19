@@ -590,6 +590,53 @@ export interface PluginContentReleasesReleaseAction
   };
 }
 
+export interface PluginI18NLocale extends Schema.CollectionType {
+  collectionName: 'i18n_locale';
+  info: {
+    singularName: 'locale';
+    pluralName: 'locales';
+    collectionName: 'locales';
+    displayName: 'Locale';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 50;
+        },
+        number
+      >;
+    code: Attribute.String & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUsersPermissionsPermission
   extends Schema.CollectionType {
   collectionName: 'up_permissions';
@@ -695,7 +742,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     username: Attribute.String &
@@ -741,53 +787,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface PluginI18NLocale extends Schema.CollectionType {
-  collectionName: 'i18n_locale';
-  info: {
-    singularName: 'locale';
-    pluralName: 'locales';
-    collectionName: 'locales';
-    displayName: 'Locale';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    name: Attribute.String &
-      Attribute.SetMinMax<
-        {
-          min: 1;
-          max: 50;
-        },
-        number
-      >;
-    code: Attribute.String & Attribute.Unique;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'plugin::i18n.locale',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'plugin::i18n.locale',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
   collectionName: 'audience_members';
   info: {
@@ -811,11 +810,6 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
     event_time: Attribute.Time &
       Attribute.Required &
       Attribute.DefaultTo<'12:00'>;
-    followed_artists: Attribute.Relation<
-      'api::audience-member.audience-member',
-      'manyToMany',
-      'api::content-creator.content-creator'
-    >;
     user_id: Attribute.Relation<
       'api::audience-member.audience-member',
       'oneToOne',
@@ -844,7 +838,7 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
   info: {
     singularName: 'content-creator';
     pluralName: 'content-creators';
-    displayName: 'content_creator';
+    displayName: 'Creator Profile';
     description: '';
   };
   options: {
@@ -857,16 +851,7 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
       'oneToMany',
       'api::project.project'
     >;
-    followers: Attribute.Relation<
-      'api::content-creator.content-creator',
-      'manyToMany',
-      'api::audience-member.audience-member'
-    >;
-    user_id: Attribute.Relation<
-      'api::content-creator.content-creator',
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
+    artist_name: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -898,12 +883,17 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    pieces: Attribute.Component<'piece.piece', true>;
-    project: Attribute.Relation<
+    in_project: Attribute.Relation<
       'api::event.event',
       'manyToOne',
       'api::project.project'
     >;
+    pop_ups: Attribute.Relation<
+      'api::event.event',
+      'oneToMany',
+      'api::pop-up.pop-up'
+    >;
+    event_description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -915,6 +905,57 @@ export interface ApiEventEvent extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::event.event',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPopUpPopUp extends Schema.CollectionType {
+  collectionName: 'pop_ups';
+  info: {
+    singularName: 'pop-up';
+    pluralName: 'pop-ups';
+    displayName: 'pop up';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Attribute.Required;
+    description: Attribute.Blocks;
+    popup_size: Attribute.Enumeration<
+      ['Original (size of the image)', 'Small ', 'Medium ', 'Large ']
+    > &
+      Attribute.Required;
+    popup_position: Attribute.Enumeration<
+      [
+        'Top Left',
+        'Top center',
+        'Top right',
+        'Center left',
+        'Center',
+        'Center right',
+        'Bottom left',
+        'Bottom center',
+        'Bottom Right'
+      ]
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::pop-up.pop-up',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::pop-up.pop-up',
       'oneToOne',
       'admin::user'
     > &
@@ -980,13 +1021,14 @@ declare module '@strapi/types' {
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
+      'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'plugin::i18n.locale': PluginI18NLocale;
       'api::audience-member.audience-member': ApiAudienceMemberAudienceMember;
       'api::content-creator.content-creator': ApiContentCreatorContentCreator;
       'api::event.event': ApiEventEvent;
+      'api::pop-up.pop-up': ApiPopUpPopUp;
       'api::project.project': ApiProjectProject;
     }
   }
