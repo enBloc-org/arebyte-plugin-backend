@@ -893,7 +893,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'oneToMany',
       'api::pop-up.pop-up'
     >;
-    event_description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -924,9 +923,8 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
+    work_title: Attribute.String & Attribute.Required;
+    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     description: Attribute.Blocks;
     popup_size: Attribute.Enumeration<
       ['Original (size of the image)', 'Small ', 'Medium ', 'Large ']
@@ -945,6 +943,10 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
         'Bottom Right'
       ]
     >;
+    exeternal_link: Attribute.String;
+    artist_name: Attribute.String;
+    creation_date: Attribute.String;
+    medium: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

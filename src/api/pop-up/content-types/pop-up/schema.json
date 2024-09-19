@@ -12,14 +12,14 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "work_title": {
       "type": "string",
       "required": true
     },
     "media": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
@@ -54,6 +54,18 @@
         "Bottom center",
         "Bottom Right"
       ]
+    },
+    "exeternal_link": {
+      "type": "string"
+    },
+    "artist_name": {
+      "type": "string"
+    },
+    "creation_date": {
+      "type": "string"
+    },
+    "medium": {
+      "type": "string"
     }
   }
 }
