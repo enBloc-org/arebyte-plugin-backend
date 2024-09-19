@@ -1,5 +1,5 @@
 {
-  "key": "plugin_content_manager_configuration_components::piece.piece",
+  "key": "plugin_content_manager_configuration_components::piece.text-content",
   "value": {
     "settings": {
       "bulkable": true,
@@ -19,16 +19,16 @@
           "sortable": false
         }
       },
-      "media": {
+      "text_content": {
         "edit": {
-          "label": "media",
+          "label": "text_content",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "media",
+          "label": "text_content",
           "searchable": false,
           "sortable": false
         }
@@ -50,14 +50,13 @@
     },
     "layouts": {
       "list": [
-        "id",
-        "media"
+        "id"
       ],
       "edit": [
         [
           {
-            "name": "media",
-            "size": 6
+            "name": "text_content",
+            "size": 12
           }
         ],
         [
@@ -68,7 +67,7 @@
         ]
       ]
     },
-    "uid": "piece.piece",
+    "uid": "piece.text-content",
     "isComponent": true
   },
   "type": "object",

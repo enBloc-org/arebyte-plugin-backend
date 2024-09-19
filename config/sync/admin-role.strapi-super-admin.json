@@ -133,13 +133,6 @@
       "conditions": []
     },
     {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::event.event",
-      "properties": {},
-      "conditions": []
-    },
-    {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::event.event",
@@ -172,14 +165,13 @@
       "properties": {
         "fields": [
           "work_title",
-          "media",
-          "description",
           "popup_size",
           "popup_position",
           "exeternal_link",
           "artist_name",
           "creation_date",
-          "medium"
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": []
@@ -192,27 +184,19 @@
       "conditions": []
     },
     {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::pop-up.pop-up",
-      "properties": {},
-      "conditions": []
-    },
-    {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
           "work_title",
-          "media",
-          "description",
           "popup_size",
           "popup_position",
           "exeternal_link",
           "artist_name",
           "creation_date",
-          "medium"
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": []
@@ -224,14 +208,13 @@
       "properties": {
         "fields": [
           "work_title",
-          "media",
-          "description",
           "popup_size",
           "popup_position",
           "exeternal_link",
           "artist_name",
           "creation_date",
-          "medium"
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": []

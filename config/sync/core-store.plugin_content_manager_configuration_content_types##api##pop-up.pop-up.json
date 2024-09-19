@@ -33,34 +33,6 @@
           "sortable": true
         }
       },
-      "media": {
-        "edit": {
-          "label": "media",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "media",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "description": {
-        "edit": {
-          "label": "description",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "description",
-          "searchable": false,
-          "sortable": false
-        }
-      },
       "popup_size": {
         "edit": {
           "label": "popup_size",
@@ -145,6 +117,20 @@
           "sortable": true
         }
       },
+      "popup_content": {
+        "edit": {
+          "label": "popup_content",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "popup_content",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -205,6 +191,11 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "createdAt",
+        "work_title"
+      ],
       "edit": [
         [
           {
@@ -230,15 +221,11 @@
           {
             "name": "medium",
             "size": 6
-          },
-          {
-            "name": "media",
-            "size": 6
           }
         ],
         [
           {
-            "name": "description",
+            "name": "popup_content",
             "size": 12
           }
         ],
@@ -252,12 +239,6 @@
             "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "media",
-        "createdAt",
-        "work_title"
       ]
     },
     "uid": "api::pop-up.pop-up"

@@ -14,27 +14,21 @@
           "artist_name"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::content-creator.content-creator",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::content-creator.content-creator",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
@@ -47,9 +41,7 @@
           "artist_name"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.update",
@@ -62,9 +54,7 @@
           "artist_name"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.create",
@@ -83,15 +73,6 @@
     },
     {
       "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::event.event",
-      "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::event.event",
       "properties": {},
@@ -135,11 +116,14 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "media",
-          "description",
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title"
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": [
@@ -156,25 +140,19 @@
       ]
     },
     {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::pop-up.pop-up",
-      "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "media",
-          "description",
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title"
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": [
@@ -187,11 +165,14 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "media",
-          "description",
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title"
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": [
