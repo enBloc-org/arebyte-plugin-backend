@@ -8,28 +8,13 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "work_title": {
       "type": "string",
       "required": true
-    },
-    "media": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "description": {
-      "type": "blocks",
-      "required": false
     },
     "popup_size": {
       "type": "enumeration",
@@ -66,6 +51,15 @@
     },
     "medium": {
       "type": "string"
+    },
+    "popup_content": {
+      "type": "dynamiczone",
+      "components": [
+        "piece.text-content",
+        "piece.piece"
+      ],
+      "required": true,
+      "max": 1
     }
   }
 }

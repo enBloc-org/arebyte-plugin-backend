@@ -879,7 +879,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -895,7 +895,6 @@ export interface ApiEventEvent extends Schema.CollectionType {
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::event.event',
       'oneToOne',
@@ -920,12 +919,10 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     work_title: Attribute.String & Attribute.Required;
-    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    description: Attribute.Blocks;
     popup_size: Attribute.Enumeration<
       ['Original (size of the image)', 'Small ', 'Medium ', 'Large ']
     > &
@@ -947,9 +944,18 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
     artist_name: Attribute.String;
     creation_date: Attribute.String;
     medium: Attribute.String;
+    popup_content: Attribute.DynamicZone<
+      ['piece.text-content', 'piece.piece']
+    > &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::pop-up.pop-up',
       'oneToOne',
