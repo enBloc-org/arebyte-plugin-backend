@@ -1,0 +1,19 @@
+meta {
+  name: get_single_project
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/api/projects/1
+  body: none
+}
+
+headers {
+  Authorization: bearer {{jwtToken}}
+}
+
+assert {
+  res.status: eq 200
+  res.body.data: isDefined
+}
