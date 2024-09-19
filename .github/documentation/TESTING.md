@@ -39,3 +39,5 @@ The bruno cli is one of the dev dependencies in this project and we have prepare
 npm run test
 ```
 Please keep in mind that the server must be running.
+
+If you are running tests in the Bruno GUI you will need to select `local` in the `environment` drop-down menu on the top-right corner of the window.
