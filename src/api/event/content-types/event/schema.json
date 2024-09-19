@@ -16,16 +16,19 @@
       "type": "string",
       "required": true
     },
-    "pieces": {
-      "type": "component",
-      "repeatable": true,
-      "component": "piece.piece"
-    },
-    "project": {
+    "in_project": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::project.project",
       "inversedBy": "events"
+    },
+    "pop_ups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pop-up.pop-up"
+    },
+    "event_description": {
+      "type": "blocks"
     }
   }
 }

@@ -28,12 +28,6 @@
       "default": "12:00",
       "unique": false
     },
-    "followed_artists": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::content-creator.content-creator",
-      "inversedBy": "followers"
-    },
     "user_id": {
       "type": "relation",
       "relation": "oneToOne",

@@ -13,7 +13,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "strapi": "strapi",
-    "test": "cd bruno && npx bru run --env local"
+    "test": "cd bruno && npx bru run --env local",
+    "cs": "config-sync"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "4.25.11",
@@ -24,6 +25,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
+    "strapi-plugin-config-sync": "^1.2.6",
     "styled-components": "5.3.3"
   },
   "devDependencies": {
