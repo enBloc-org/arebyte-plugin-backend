@@ -28,10 +28,10 @@
       "default": "12:00",
       "unique": false
     },
-    "user_id": {
+    "users_permissions_user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "admin::user"
+      "target": "plugin::users-permissions.user"
     }
   }
 }

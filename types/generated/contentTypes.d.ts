@@ -810,10 +810,10 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
     event_time: Attribute.Time &
       Attribute.Required &
       Attribute.DefaultTo<'12:00'>;
-    user_id: Attribute.Relation<
+    users_permissions_user: Attribute.Relation<
       'api::audience-member.audience-member',
       'oneToOne',
-      'admin::user'
+      'plugin::users-permissions.user'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
