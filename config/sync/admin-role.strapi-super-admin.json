@@ -12,7 +12,7 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "user_id"
+          "users_permissions_user"
         ]
       },
       "conditions": []
@@ -40,7 +40,7 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "user_id"
+          "users_permissions_user"
         ]
       },
       "conditions": []
@@ -54,7 +54,7 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "user_id"
+          "users_permissions_user"
         ]
       },
       "conditions": []

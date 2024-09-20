@@ -62,9 +62,9 @@
           "sortable": true
         }
       },
-      "user_id": {
+      "users_permissions_user": {
         "edit": {
-          "label": "user_id",
+          "label": "users_permissions_user",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -72,7 +72,7 @@
           "mainField": "username"
         },
         "list": {
-          "label": "user_id",
+          "label": "users_permissions_user",
           "searchable": true,
           "sortable": true
         }
@@ -158,11 +158,9 @@
           {
             "name": "event_time",
             "size": 4
-          }
-        ],
-        [
+          },
           {
-            "name": "user_id",
+            "name": "users_permissions_user",
             "size": 6
           }
         ]
