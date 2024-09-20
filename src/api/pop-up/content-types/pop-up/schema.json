@@ -38,7 +38,8 @@
         "Bottom left",
         "Bottom center",
         "Bottom Right"
-      ]
+      ],
+      "required": true
     },
     "exeternal_link": {
       "type": "string"

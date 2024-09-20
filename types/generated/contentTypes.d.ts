@@ -939,7 +939,8 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
         'Bottom center',
         'Bottom Right'
       ]
-    >;
+    > &
+      Attribute.Required;
     exeternal_link: Attribute.String;
     artist_name: Attribute.String;
     creation_date: Attribute.String;
