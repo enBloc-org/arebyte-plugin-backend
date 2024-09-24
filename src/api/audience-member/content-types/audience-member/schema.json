@@ -32,6 +32,20 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
+    },
+    "project_id": {
+      "type": "integer",
+      "required": true
+    },
+    "current_index": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "is_paused": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

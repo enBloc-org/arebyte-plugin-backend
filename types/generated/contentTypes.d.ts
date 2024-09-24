@@ -815,6 +815,13 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
+    project_id: Attribute.Integer & Attribute.Required;
+    current_index: Attribute.Integer &
+      Attribute.Required &
+      Attribute.DefaultTo<0>;
+    is_paused: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -863,6 +870,40 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::content-creator.content-creator',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCurrentProjectCurrentProject extends Schema.SingleType {
+  collectionName: 'current_projects';
+  info: {
+    singularName: 'current-project';
+    pluralName: 'current-projects';
+    displayName: 'Current_Project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    project: Attribute.Relation<
+      'api::current-project.current-project',
+      'oneToOne',
+      'api::project.project'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::current-project.current-project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::current-project.current-project',
       'oneToOne',
       'admin::user'
     > &
@@ -1036,6 +1077,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::audience-member.audience-member': ApiAudienceMemberAudienceMember;
       'api::content-creator.content-creator': ApiContentCreatorContentCreator;
+      'api::current-project.current-project': ApiCurrentProjectCurrentProject;
       'api::event.event': ApiEventEvent;
       'api::pop-up.pop-up': ApiPopUpPopUp;
       'api::project.project': ApiProjectProject;
