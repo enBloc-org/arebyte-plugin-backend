@@ -1,13 +1,17 @@
 meta {
   name: get_single_project
   type: http
-  seq: 2
+  seq: 1
 }
 
 get {
-  url: {{host}}/api/projects/7
+  url: {{host}}/api/current-project
   body: none
   auth: none
+}
+
+headers {
+  Authorization: bearer {{ApiToken}}
 }
 
 assert {
