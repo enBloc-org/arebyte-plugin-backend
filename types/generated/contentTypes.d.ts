@@ -796,7 +796,7 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     is_quiet: Attribute.Boolean &
@@ -824,7 +824,6 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
       Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::audience-member.audience-member',
       'oneToOne',
