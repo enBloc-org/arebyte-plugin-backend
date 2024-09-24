@@ -12,20 +12,16 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "user_id"
+          "users_permissions_user",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::audience-member.audience-member",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::audience-member.audience-member",
       "properties": {},
@@ -40,7 +36,10 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "user_id"
+          "users_permissions_user",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []
@@ -54,7 +53,10 @@
           "is_quiet",
           "playlist",
           "event_time",
-          "user_id"
+          "users_permissions_user",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []
@@ -115,13 +117,10 @@
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
-      "subject": "api::event.event",
+      "subject": "api::current-project.current-project",
       "properties": {
         "fields": [
-          "title",
-          "in_project",
-          "pop_ups",
-          "event_description"
+          "project"
         ]
       },
       "conditions": []
@@ -129,12 +128,54 @@
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
-      "subject": "api::event.event",
+      "subject": "api::current-project.current-project",
       "properties": {},
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {
+        "fields": [
+          "project"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {
+        "fields": [
+          "project"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "in_project",
+          "pop_ups"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::event.event",
       "properties": {},
@@ -148,8 +189,7 @@
         "fields": [
           "title",
           "in_project",
-          "pop_ups",
-          "event_description"
+          "pop_ups"
         ]
       },
       "conditions": []
@@ -162,8 +202,7 @@
         "fields": [
           "title",
           "in_project",
-          "pop_ups",
-          "event_description"
+          "pop_ups"
         ]
       },
       "conditions": []
@@ -174,11 +213,14 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
-          "media",
-          "description",
+          "work_title",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": []
@@ -191,23 +233,19 @@
       "conditions": []
     },
     {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::pop-up.pop-up",
-      "properties": {},
-      "conditions": []
-    },
-    {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
-          "media",
-          "description",
+          "work_title",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": []
@@ -218,11 +256,14 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
-          "media",
-          "description",
+          "work_title",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
         ]
       },
       "conditions": []

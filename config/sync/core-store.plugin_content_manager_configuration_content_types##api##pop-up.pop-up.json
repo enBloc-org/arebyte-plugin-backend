@@ -6,8 +6,8 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
-      "defaultSortBy": "title",
+      "mainField": "work_title",
+      "defaultSortBy": "work_title",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -19,46 +19,18 @@
           "sortable": true
         }
       },
-      "title": {
+      "work_title": {
         "edit": {
-          "label": "title",
+          "label": "work_title",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "title",
+          "label": "work_title",
           "searchable": true,
           "sortable": true
-        }
-      },
-      "media": {
-        "edit": {
-          "label": "media",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "media",
-          "searchable": false,
-          "sortable": false
-        }
-      },
-      "description": {
-        "edit": {
-          "label": "description",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "description",
-          "searchable": false,
-          "sortable": false
         }
       },
       "popup_size": {
@@ -87,6 +59,76 @@
           "label": "popup_position",
           "searchable": true,
           "sortable": true
+        }
+      },
+      "exeternal_link": {
+        "edit": {
+          "label": "exeternal_link",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "exeternal_link",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "artist_name": {
+        "edit": {
+          "label": "artist_name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "artist_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "creation_date": {
+        "edit": {
+          "label": "creation_date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "creation_date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "medium": {
+        "edit": {
+          "label": "medium",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "medium",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "popup_content": {
+        "edit": {
+          "label": "popup_content",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "popup_content",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -151,27 +193,11 @@
     "layouts": {
       "list": [
         "id",
-        "title",
-        "media",
-        "createdAt"
+        "createdAt",
+        "work_title",
+        "exeternal_link"
       ],
       "edit": [
-        [
-          {
-            "name": "title",
-            "size": 6
-          },
-          {
-            "name": "media",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "description",
-            "size": 12
-          }
-        ],
         [
           {
             "name": "popup_size",
@@ -180,6 +206,38 @@
           {
             "name": "popup_position",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "work_title",
+            "size": 6
+          },
+          {
+            "name": "exeternal_link",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "artist_name",
+            "size": 6
+          },
+          {
+            "name": "creation_date",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "medium",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "popup_content",
+            "size": 12
           }
         ]
       ]

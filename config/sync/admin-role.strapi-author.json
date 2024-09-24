@@ -11,20 +11,16 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time"
+          "event_time",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::audience-member.audience-member",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::audience-member.audience-member",
       "properties": {},
@@ -38,7 +34,10 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time"
+          "event_time",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []
@@ -51,7 +50,10 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time"
+          "event_time",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []
@@ -119,13 +121,6 @@
     },
     {
       "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::event.event",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::event.event",
       "properties": {},

@@ -74,8 +74,7 @@
         "fields": [
           "title",
           "in_project",
-          "pop_ups",
-          "event_description"
+          "pop_ups"
         ]
       },
       "conditions": [
@@ -92,15 +91,6 @@
       ]
     },
     {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::event.event",
-      "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::event.event",
@@ -108,8 +98,7 @@
         "fields": [
           "title",
           "in_project",
-          "pop_ups",
-          "event_description"
+          "pop_ups"
         ]
       },
       "conditions": [
@@ -124,8 +113,7 @@
         "fields": [
           "title",
           "in_project",
-          "pop_ups",
-          "event_description"
+          "pop_ups"
         ]
       },
       "conditions": [
@@ -138,11 +126,10 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
-          "media",
-          "description",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "work_title",
+          "popup_content"
         ]
       },
       "conditions": [
@@ -159,25 +146,15 @@
       ]
     },
     {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::pop-up.pop-up",
-      "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
       "action": "plugin::content-manager.explorer.read",
       "actionParameters": {},
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
-          "media",
-          "description",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "work_title",
+          "popup_content"
         ]
       },
       "conditions": [
@@ -190,11 +167,10 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
-          "title",
-          "media",
-          "description",
           "popup_size",
-          "popup_position"
+          "popup_position",
+          "work_title",
+          "popup_content"
         ]
       },
       "conditions": [

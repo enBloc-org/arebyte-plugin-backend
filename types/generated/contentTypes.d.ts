@@ -796,7 +796,7 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     is_quiet: Attribute.Boolean &
@@ -810,14 +810,20 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
     event_time: Attribute.Time &
       Attribute.Required &
       Attribute.DefaultTo<'12:00'>;
-    user_id: Attribute.Relation<
+    users_permissions_user: Attribute.Relation<
       'api::audience-member.audience-member',
       'oneToOne',
-      'admin::user'
+      'plugin::users-permissions.user'
     >;
+    project_id: Attribute.Integer & Attribute.Required;
+    current_index: Attribute.Integer &
+      Attribute.Required &
+      Attribute.DefaultTo<0>;
+    is_paused: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::audience-member.audience-member',
       'oneToOne',
@@ -870,6 +876,40 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
   };
 }
 
+export interface ApiCurrentProjectCurrentProject extends Schema.SingleType {
+  collectionName: 'current_projects';
+  info: {
+    singularName: 'current-project';
+    pluralName: 'current-projects';
+    displayName: 'Current_Project';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    project: Attribute.Relation<
+      'api::current-project.current-project',
+      'oneToOne',
+      'api::project.project'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::current-project.current-project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::current-project.current-project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Schema.CollectionType {
   collectionName: 'events';
   info: {
@@ -879,7 +919,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
@@ -893,10 +933,8 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'oneToMany',
       'api::pop-up.pop-up'
     >;
-    event_description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::event.event',
       'oneToOne',
@@ -921,13 +959,10 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
-    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
-    description: Attribute.Blocks;
+    work_title: Attribute.String & Attribute.Required;
     popup_size: Attribute.Enumeration<
       ['Original (size of the image)', 'Small ', 'Medium ', 'Large ']
     > &
@@ -944,10 +979,24 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
         'Bottom center',
         'Bottom Right'
       ]
-    >;
+    > &
+      Attribute.Required;
+    exeternal_link: Attribute.String;
+    artist_name: Attribute.String;
+    creation_date: Attribute.String;
+    medium: Attribute.String;
+    popup_content: Attribute.DynamicZone<
+      ['piece.text-content', 'piece.piece']
+    > &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::pop-up.pop-up',
       'oneToOne',
@@ -1027,6 +1076,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::audience-member.audience-member': ApiAudienceMemberAudienceMember;
       'api::content-creator.content-creator': ApiContentCreatorContentCreator;
+      'api::current-project.current-project': ApiCurrentProjectCurrentProject;
       'api::event.event': ApiEventEvent;
       'api::pop-up.pop-up': ApiPopUpPopUp;
       'api::project.project': ApiProjectProject;

@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -28,10 +28,24 @@
       "default": "12:00",
       "unique": false
     },
-    "user_id": {
+    "users_permissions_user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "admin::user"
+      "target": "plugin::users-permissions.user"
+    },
+    "project_id": {
+      "type": "integer",
+      "required": true
+    },
+    "current_index": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "is_paused": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

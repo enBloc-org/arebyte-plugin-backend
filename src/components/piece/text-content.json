@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_piece_text_contents",
+  "info": {
+    "displayName": "Text_content",
+    "icon": "pencil"
+  },
+  "options": {},
+  "attributes": {
+    "text_content": {
+      "type": "blocks"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

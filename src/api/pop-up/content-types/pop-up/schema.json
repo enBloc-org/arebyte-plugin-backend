@@ -8,28 +8,13 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "work_title": {
       "type": "string",
       "required": true
-    },
-    "media": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "description": {
-      "type": "blocks",
-      "required": false
     },
     "popup_size": {
       "type": "enumeration",
@@ -53,7 +38,29 @@
         "Bottom left",
         "Bottom center",
         "Bottom Right"
-      ]
+      ],
+      "required": true
+    },
+    "exeternal_link": {
+      "type": "string"
+    },
+    "artist_name": {
+      "type": "string"
+    },
+    "creation_date": {
+      "type": "string"
+    },
+    "medium": {
+      "type": "string"
+    },
+    "popup_content": {
+      "type": "dynamiczone",
+      "components": [
+        "piece.text-content",
+        "piece.piece"
+      ],
+      "required": true,
+      "max": 1
     }
   }
 }

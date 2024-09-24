@@ -1,13 +1,13 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::event.event",
+  "key": "plugin_content_manager_configuration_content_types::api::current-project.current-project",
   "value": {
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "title",
-      "defaultSortBy": "title",
+      "mainField": "id",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -19,23 +19,9 @@
           "sortable": true
         }
       },
-      "title": {
+      "project": {
         "edit": {
-          "label": "title",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "title",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "in_project": {
-        "edit": {
-          "label": "in_project",
+          "label": "project",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -43,24 +29,9 @@
           "mainField": "title"
         },
         "list": {
-          "label": "in_project",
+          "label": "project",
           "searchable": true,
           "sortable": true
-        }
-      },
-      "pop_ups": {
-        "edit": {
-          "label": "pop_ups",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "work_title"
-        },
-        "list": {
-          "label": "pop_ups",
-          "searchable": false,
-          "sortable": false
         }
       },
       "createdAt": {
@@ -125,30 +96,20 @@
     "layouts": {
       "list": [
         "id",
-        "title",
+        "project",
         "createdAt",
-        "pop_ups"
+        "updatedAt"
       ],
       "edit": [
         [
           {
-            "name": "title",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "pop_ups",
-            "size": 6
-          },
-          {
-            "name": "in_project",
+            "name": "project",
             "size": 6
           }
         ]
       ]
     },
-    "uid": "api::event.event"
+    "uid": "api::current-project.current-project"
   },
   "type": "object",
   "environment": null,
