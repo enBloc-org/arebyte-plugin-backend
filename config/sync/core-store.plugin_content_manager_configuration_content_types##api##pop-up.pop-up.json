@@ -194,26 +194,37 @@
       "list": [
         "id",
         "createdAt",
-        "work_title"
+        "work_title",
+        "exeternal_link"
       ],
       "edit": [
+        [
+          {
+            "name": "popup_size",
+            "size": 6
+          },
+          {
+            "name": "popup_position",
+            "size": 6
+          }
+        ],
         [
           {
             "name": "work_title",
             "size": 6
           },
           {
-            "name": "artist_name",
+            "name": "exeternal_link",
             "size": 6
           }
         ],
         [
           {
-            "name": "creation_date",
+            "name": "artist_name",
             "size": 6
           },
           {
-            "name": "exeternal_link",
+            "name": "creation_date",
             "size": 6
           }
         ],
@@ -227,16 +238,6 @@
           {
             "name": "popup_content",
             "size": 12
-          }
-        ],
-        [
-          {
-            "name": "popup_size",
-            "size": 6
-          },
-          {
-            "name": "popup_position",
-            "size": 6
           }
         ]
       ]

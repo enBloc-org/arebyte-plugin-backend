@@ -11,7 +11,10 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time"
+          "event_time",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []
@@ -38,7 +41,10 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time"
+          "event_time",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []
@@ -51,7 +57,10 @@
         "fields": [
           "is_quiet",
           "playlist",
-          "event_time"
+          "event_time",
+          "project_id",
+          "current_index",
+          "is_paused"
         ]
       },
       "conditions": []

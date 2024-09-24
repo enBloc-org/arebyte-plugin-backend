@@ -10,6 +10,9 @@
       "action": "api::content-creator.content-creator.findOne"
     },
     {
+      "action": "api::current-project.current-project.find"
+    },
+    {
       "action": "api::event.event.find"
     },
     {
