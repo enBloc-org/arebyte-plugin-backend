@@ -4,6 +4,9 @@
   "type": "authenticated",
   "permissions": [
     {
+      "action": "api::audience-member.audience-member.find"
+    },
+    {
       "action": "api::audience-member.audience-member.findOne"
     },
     {
@@ -35,6 +38,15 @@
     },
     {
       "action": "plugin::users-permissions.auth.changePassword"
+    },
+    {
+      "action": "plugin::users-permissions.role.find"
+    },
+    {
+      "action": "plugin::users-permissions.role.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.findOne"
     },
     {
       "action": "plugin::users-permissions.user.me"

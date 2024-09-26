@@ -561,7 +561,8 @@
           "confirmationToken",
           "confirmed",
           "blocked",
-          "role"
+          "role",
+          "audience_member"
         ]
       },
       "conditions": []
@@ -587,7 +588,8 @@
           "confirmationToken",
           "confirmed",
           "blocked",
-          "role"
+          "role",
+          "audience_member"
         ]
       },
       "conditions": []
@@ -606,7 +608,8 @@
           "confirmationToken",
           "confirmed",
           "blocked",
-          "role"
+          "role",
+          "audience_member"
         ]
       },
       "conditions": []
