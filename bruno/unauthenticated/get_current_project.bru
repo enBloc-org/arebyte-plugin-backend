@@ -5,13 +5,23 @@ meta {
 }
 
 get {
-  url: {{host}}/api/current-project
+  url: {{host}}/api/current-project?fields[0]=id&fields[1]=event_time&populate[project][fields][0]=id&populate[project][fields][1]=title&populate[project][fields][2]=launch_date&populate[project][fields][3]=description&populate[project][populate][cover_image][fields][0]=%2A
   body: none
   auth: none
 }
 
+query {
+  fields[0]: id
+  fields[1]: event_time
+  populate[project][fields][0]: id
+  populate[project][fields][1]: title
+  populate[project][fields][2]: launch_date
+  populate[project][fields][3]: description
+  populate[project][populate][cover_image][fields][0]: %2A
+}
+
 assert {
   res.status: eq 200
-  res.body: isDefined 
+  res.body: isDefined
   res.body.data.event_time: eq "12:00:00.000"
 }
