@@ -1,0 +1,17 @@
+meta {
+  name: get_current_project
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/api/current-project
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+  res.body: isDefined 
+  res.body.data.event_time: eq "12:00:00.000"
+}
