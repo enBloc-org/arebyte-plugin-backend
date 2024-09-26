@@ -146,6 +146,21 @@
           "sortable": true
         }
       },
+      "audience_member": {
+        "edit": {
+          "label": "audience_member",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "audience_member",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -240,6 +255,12 @@
           },
           {
             "name": "role",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "audience_member",
             "size": 6
           }
         ]
