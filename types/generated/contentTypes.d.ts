@@ -807,10 +807,10 @@ export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
     is_quiet: Attribute.Boolean &
       Attribute.Required &
       Attribute.DefaultTo<false>;
-    playlist: Attribute.Relation<
+    favourites: Attribute.Relation<
       'api::audience-member.audience-member',
       'oneToMany',
-      'api::project.project'
+      'api::pop-up.pop-up'
     >;
     event_time: Attribute.Time &
       Attribute.Required &
