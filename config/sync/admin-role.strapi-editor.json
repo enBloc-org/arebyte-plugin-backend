@@ -126,9 +126,13 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title",
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
           "popup_content"
         ]
       },
@@ -151,9 +155,13 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title",
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
           "popup_content"
         ]
       },
@@ -167,9 +175,13 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title",
+          "exeternal_link",
+          "artist_name",
+          "creation_date",
+          "medium",
           "popup_content"
         ]
       },
