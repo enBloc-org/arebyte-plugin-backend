@@ -13,4 +13,5 @@ get {
 assert {
   res.status: eq 200
   res.body.data: isDefined
+  res.body.data.event_time: eq 12:00:00.000
 }

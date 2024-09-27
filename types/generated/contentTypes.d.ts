@@ -887,6 +887,7 @@ export interface ApiCurrentProjectCurrentProject extends Schema.SingleType {
     singularName: 'current-project';
     pluralName: 'current-projects';
     displayName: 'Current_Project';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -897,6 +898,9 @@ export interface ApiCurrentProjectCurrentProject extends Schema.SingleType {
       'oneToOne',
       'api::project.project'
     >;
+    event_time: Attribute.Time &
+      Attribute.Required &
+      Attribute.DefaultTo<'12:00'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
