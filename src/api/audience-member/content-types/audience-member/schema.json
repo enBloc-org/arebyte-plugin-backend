@@ -17,10 +17,10 @@
       "default": false,
       "required": true
     },
-    "playlist": {
+    "favourites": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::project.project"
+      "target": "api::pop-up.pop-up"
     },
     "event_time": {
       "type": "time",

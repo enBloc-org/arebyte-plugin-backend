@@ -33,17 +33,17 @@
           "sortable": true
         }
       },
-      "playlist": {
+      "favourites": {
         "edit": {
-          "label": "playlist",
+          "label": "favourites",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true,
-          "mainField": "title"
+          "mainField": "work_title"
         },
         "list": {
-          "label": "playlist",
+          "label": "favourites",
           "searchable": false,
           "sortable": false
         }
@@ -179,6 +179,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "is_quiet",
+        "event_time",
+        "favourites"
+      ],
       "edit": [
         [
           {
@@ -208,20 +214,14 @@
         ],
         [
           {
-            "name": "playlist",
+            "name": "users_permissions_user",
             "size": 6
           },
           {
-            "name": "users_permissions_user",
+            "name": "favourites",
             "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "is_quiet",
-        "playlist",
-        "event_time"
       ]
     },
     "uid": "api::audience-member.audience-member"

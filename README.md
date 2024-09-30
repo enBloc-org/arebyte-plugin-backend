@@ -28,6 +28,26 @@ After you merge new changes:
 
 ```npm run cs import``` 
 
+### Creating Admin Users
+
+Before you import the seed data please create two admin user with the role content-creators in the ```setting/administration``` panel.
+
+They should have the follow information
+
+``` 
+first name: Amelia
+last name: Flores
+username: amelia_flores
+email: artone@test.com
+password: Art1Test
+
+first name: Charlie
+last name: Radical
+username: charlie_radical
+email: arttwo@test.com
+password: Art2Test
+```
+
 ### Data importing and exporting for development
 As part of this project the development team has created a migration file to allow for consistent data for development and testing. This file will be included in any handover for this project, so please look there for the relevant file.
 
@@ -36,6 +56,7 @@ To import the this file once you have the project up and running run:
 ```npm run strapi import -- -f /path/to/my/file/arebyte-test-data.tar.gz```
 
 If for any reason you want to export updated versions of the data please read the official documentation on how to do so [here](https://docs.strapi.io/dev-docs/data-management/export).
+
 
 #### Login details for test users
 There are two authenticated users as part of this development data, to use them during development please use the following credentials:

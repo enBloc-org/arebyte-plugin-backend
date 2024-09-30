@@ -10,7 +10,6 @@
       "properties": {
         "fields": [
           "is_quiet",
-          "playlist",
           "event_time",
           "project_id",
           "current_index",
@@ -33,7 +32,6 @@
       "properties": {
         "fields": [
           "is_quiet",
-          "playlist",
           "event_time",
           "project_id",
           "current_index",
@@ -49,7 +47,6 @@
       "properties": {
         "fields": [
           "is_quiet",
-          "playlist",
           "event_time",
           "project_id",
           "current_index",
