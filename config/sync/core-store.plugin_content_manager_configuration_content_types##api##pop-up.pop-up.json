@@ -61,16 +61,16 @@
           "sortable": true
         }
       },
-      "exeternal_link": {
+      "external_link": {
         "edit": {
-          "label": "exeternal_link",
+          "label": "external_link",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "exeternal_link",
+          "label": "external_link",
           "searchable": true,
           "sortable": true
         }
@@ -191,6 +191,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "createdAt",
+        "work_title",
+        "external_link"
+      ],
       "edit": [
         [
           {
@@ -205,10 +211,6 @@
         [
           {
             "name": "creation_date",
-            "size": 6
-          },
-          {
-            "name": "exeternal_link",
             "size": 6
           }
         ],
@@ -233,13 +235,13 @@
             "name": "popup_content",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "external_link",
+            "size": 6
+          }
         ]
-      ],
-      "list": [
-        "id",
-        "createdAt",
-        "work_title",
-        "exeternal_link"
       ]
     },
     "uid": "api::pop-up.pop-up"
