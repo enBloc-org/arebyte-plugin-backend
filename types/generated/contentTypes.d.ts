@@ -973,7 +973,7 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
   attributes: {
     work_title: Attribute.String & Attribute.Required;
     popup_size: Attribute.Enumeration<
-      ['Original (size of the image)', 'Small ', 'Medium ', 'Large ']
+      ['Original (size of the image)', 'Small', 'Medium', 'Large']
     > &
       Attribute.Required;
     popup_position: Attribute.Enumeration<
@@ -990,7 +990,7 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
       ]
     > &
       Attribute.Required;
-    exeternal_link: Attribute.String;
+    external_link: Attribute.String;
     artist_name: Attribute.String;
     creation_date: Attribute.String;
     medium: Attribute.String;

@@ -3,8 +3,9 @@ import type { Schema, Attribute } from '@strapi/strapi';
 export interface PieceTextContent extends Schema.Component {
   collectionName: 'components_piece_text_contents';
   info: {
-    displayName: 'Text_content';
+    displayName: 'text_content';
     icon: 'pencil';
+    description: '';
   };
   attributes: {
     text_content: Attribute.Blocks;
