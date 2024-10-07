@@ -863,6 +863,20 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
       'api::project.project'
     >;
     artist_name: Attribute.String;
+    upcoming_events: Attribute.Component<'piece.upcoming-event', true> &
+      Attribute.SetMinMax<
+        {
+          max: 2;
+        },
+        number
+      >;
+    social_media_links: Attribute.Component<'piece.social-media-link', true> &
+      Attribute.SetMinMax<
+        {
+          max: 7;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1004,6 +1018,9 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
         },
         number
       >;
+    thumbnail_image: Attribute.Media<'images'> &
+      Attribute.Required &
+      Attribute.Private;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
