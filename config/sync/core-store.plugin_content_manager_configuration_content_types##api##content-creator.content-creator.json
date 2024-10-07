@@ -62,6 +62,34 @@
           "sortable": true
         }
       },
+      "upcoming_events": {
+        "edit": {
+          "label": "upcoming_events",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "upcoming_events",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "social_media_links": {
+        "edit": {
+          "label": "social_media_links",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "social_media_links",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -122,6 +150,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "projects",
+        "artist_name",
+        "upcoming_events"
+      ],
       "edit": [
         [
           {
@@ -140,12 +174,19 @@
             "name": "projects",
             "size": 6
           }
+        ],
+        [
+          {
+            "name": "upcoming_events",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "social_media_links",
+            "size": 12
+          }
         ]
-      ],
-      "list": [
-        "id",
-        "projects",
-        "artist_name"
       ]
     },
     "uid": "api::content-creator.content-creator"

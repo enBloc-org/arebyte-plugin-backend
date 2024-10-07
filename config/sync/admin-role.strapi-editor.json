@@ -11,7 +11,10 @@
         "fields": [
           "bio",
           "projects",
-          "artist_name"
+          "artist_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date"
         ]
       },
       "conditions": [
@@ -44,7 +47,10 @@
         "fields": [
           "bio",
           "projects",
-          "artist_name"
+          "artist_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date"
         ]
       },
       "conditions": [
@@ -59,7 +65,10 @@
         "fields": [
           "bio",
           "projects",
-          "artist_name"
+          "artist_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date"
         ]
       },
       "conditions": [
@@ -133,7 +142,8 @@
           "artist_name",
           "creation_date",
           "medium",
-          "popup_content"
+          "popup_content",
+          "thumbnail_image"
         ]
       },
       "conditions": [
@@ -162,7 +172,8 @@
           "artist_name",
           "creation_date",
           "medium",
-          "popup_content"
+          "popup_content",
+          "thumbnail_image"
         ]
       },
       "conditions": [
@@ -182,7 +193,8 @@
           "artist_name",
           "creation_date",
           "medium",
-          "popup_content"
+          "popup_content",
+          "thumbnail_image"
         ]
       },
       "conditions": [

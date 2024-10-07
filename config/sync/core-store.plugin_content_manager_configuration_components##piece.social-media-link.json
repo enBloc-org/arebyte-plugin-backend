@@ -1,0 +1,77 @@
+{
+  "key": "plugin_content_manager_configuration_components::piece.social-media-link",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "link_url",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "platform": {
+        "edit": {
+          "label": "platform",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "platform",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "link_url": {
+        "edit": {
+          "label": "link_url",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "link_url",
+          "searchable": false,
+          "sortable": false
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "platform"
+      ],
+      "edit": [
+        [
+          {
+            "name": "platform",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "link_url",
+            "size": 12
+          }
+        ]
+      ]
+    },
+    "uid": "piece.social-media-link",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
