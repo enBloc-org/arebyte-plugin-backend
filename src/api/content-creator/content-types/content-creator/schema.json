@@ -24,6 +24,18 @@
     },
     "artist_name": {
       "type": "string"
+    },
+    "upcoming_events": {
+      "type": "component",
+      "repeatable": true,
+      "component": "piece.upcoming-event",
+      "max": 2
+    },
+    "social_media_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "piece.social-media-link",
+      "max": 7
     }
   }
 }
