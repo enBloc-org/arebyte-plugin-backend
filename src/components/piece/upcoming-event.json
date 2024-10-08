@@ -20,7 +20,9 @@
       "required": true
     },
     "event_link": {
-      "type": "string"
+      "type": "string",
+      "regex": "^https?:\\/\\/",
+      "default": "https://"
     }
   }
 }

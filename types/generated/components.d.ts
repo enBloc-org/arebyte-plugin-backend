@@ -11,7 +11,7 @@ export interface PieceUpcomingEvent extends Schema.Component {
     event_name: Attribute.String & Attribute.Required;
     event_location: Attribute.String & Attribute.Required;
     event_date: Attribute.DateTime & Attribute.Required;
-    event_link: Attribute.String;
+    event_link: Attribute.String & Attribute.DefaultTo<'https://'>;
   };
 }
 
