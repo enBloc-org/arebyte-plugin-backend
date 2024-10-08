@@ -48,16 +48,16 @@
           "sortable": false
         }
       },
-      "artist_name": {
+      "curator_name": {
         "edit": {
-          "label": "artist_name",
+          "label": "curator_name",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "artist_name",
+          "label": "curator_name",
           "searchable": true,
           "sortable": true
         }
@@ -86,6 +86,34 @@
         },
         "list": {
           "label": "social_media_links",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "curator_organisation": {
+        "edit": {
+          "label": "curator_organisation",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "curator_organisation",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "organisation_logo": {
+        "edit": {
+          "label": "organisation_logo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "organisation_logo",
           "searchable": false,
           "sortable": false
         }
@@ -150,16 +178,24 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "projects",
-        "artist_name",
-        "upcoming_events"
-      ],
       "edit": [
         [
           {
-            "name": "artist_name",
+            "name": "curator_name",
+            "size": 6
+          },
+          {
+            "name": "curator_organisation",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "organisation_logo",
+            "size": 6
+          },
+          {
+            "name": "projects",
             "size": 6
           }
         ],
@@ -167,12 +203,6 @@
           {
             "name": "bio",
             "size": 12
-          }
-        ],
-        [
-          {
-            "name": "projects",
-            "size": 6
           }
         ],
         [
@@ -187,6 +217,12 @@
             "size": 12
           }
         ]
+      ],
+      "list": [
+        "id",
+        "projects",
+        "upcoming_events",
+        "curator_name"
       ]
     },
     "uid": "api::content-creator.content-creator"
