@@ -862,7 +862,7 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
       'oneToMany',
       'api::project.project'
     >;
-    artist_name: Attribute.String;
+    curator_name: Attribute.String;
     upcoming_events: Attribute.Component<'piece.upcoming-event', true> &
       Attribute.SetMinMax<
         {
@@ -877,6 +877,8 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
         },
         number
       >;
+    curator_organisation: Attribute.String;
+    organisation_logo: Attribute.Media<'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
