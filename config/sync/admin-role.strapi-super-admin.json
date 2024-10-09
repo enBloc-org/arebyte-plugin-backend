@@ -69,7 +69,15 @@
         "fields": [
           "bio",
           "projects",
-          "artist_name"
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "upcoming_events.event_link",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
         ]
       },
       "conditions": []
@@ -96,7 +104,15 @@
         "fields": [
           "bio",
           "projects",
-          "artist_name"
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "upcoming_events.event_link",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
         ]
       },
       "conditions": []
@@ -109,7 +125,15 @@
         "fields": [
           "bio",
           "projects",
-          "artist_name"
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "upcoming_events.event_link",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
         ]
       },
       "conditions": []
@@ -223,7 +247,8 @@
           "artist_name",
           "creation_date",
           "medium",
-          "popup_content"
+          "popup_content",
+          "thumbnail_image"
         ]
       },
       "conditions": []
@@ -248,7 +273,8 @@
           "artist_name",
           "creation_date",
           "medium",
-          "popup_content"
+          "popup_content",
+          "thumbnail_image"
         ]
       },
       "conditions": []
@@ -266,7 +292,8 @@
           "artist_name",
           "creation_date",
           "medium",
-          "popup_content"
+          "popup_content",
+          "thumbnail_image"
         ]
       },
       "conditions": []

@@ -22,8 +22,31 @@
       "target": "api::project.project",
       "mappedBy": "content_creator"
     },
-    "artist_name": {
+    "curator_name": {
       "type": "string"
+    },
+    "upcoming_events": {
+      "type": "component",
+      "repeatable": true,
+      "component": "piece.upcoming-event",
+      "max": 2
+    },
+    "social_media_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "piece.social-media-link",
+      "max": 7
+    },
+    "curator_organisation": {
+      "type": "string"
+    },
+    "organisation_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }

@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{host}}/api/projects/1
+  url: {{host}}/api/projects/1?fields[0]=id&fields[1]=title&fields[2]=launch_date&fields[3]=description&populate[cover_image][fields][0]=%2A&populate[events][fields][0]=%2A&populate[content_creator][fields][0]=curator_name&populate[content_creator][fields][1]=bio&populate[content_creator][fields][2]=curator_organisation&populate[content_creator][populate][organisation_logo][fields][0]=%2A&populate[content_creator][populate][upcoming_events][fields][0]=%2A&populate[content_creator][populate][social_media_links][fields][0]=%2A
   body: none
   auth: none
 }
