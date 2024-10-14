@@ -32,7 +32,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "audience_member"
+      "mappedBy": "audience_member"
     },
     "project_id": {
       "type": "integer",
