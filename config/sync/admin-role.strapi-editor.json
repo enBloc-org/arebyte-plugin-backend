@@ -1,40 +1,88 @@
 {
-  "name": "Content Creator",
+  "name": "Editor",
   "code": "strapi-editor",
   "description": "Editors can manage and publish contents including those of other users.",
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
+      "subject": "api::audience-member.audience-member",
+      "properties": {
+        "fields": [
+          "is_quiet",
+          "event_time",
+          "users_permissions_user",
+          "project_id",
+          "current_index",
+          "is_paused"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::audience-member.audience-member",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::audience-member.audience-member",
+      "properties": {
+        "fields": [
+          "is_quiet",
+          "event_time",
+          "users_permissions_user",
+          "project_id",
+          "current_index",
+          "is_paused"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::audience-member.audience-member",
+      "properties": {
+        "fields": [
+          "is_quiet",
+          "event_time",
+          "users_permissions_user",
+          "project_id",
+          "current_index",
+          "is_paused"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
       "subject": "api::content-creator.content-creator",
       "properties": {
         "fields": [
           "bio",
-          "projects",
-          "artist_name"
+          "projects"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::content-creator.content-creator",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::content-creator.content-creator",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
@@ -43,13 +91,10 @@
       "properties": {
         "fields": [
           "bio",
-          "projects",
-          "artist_name"
+          "projects"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.update",
@@ -58,13 +103,60 @@
       "properties": {
         "fields": [
           "bio",
-          "projects",
-          "artist_name"
+          "projects"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {
+        "fields": [
+          "project",
+          "event_time"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {
+        "fields": [
+          "project",
+          "event_time"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {
+        "fields": [
+          "project",
+          "event_time"
+        ]
+      },
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.create",
@@ -77,18 +169,14 @@
           "pop_ups"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::event.event",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
@@ -101,9 +189,7 @@
           "pop_ups"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.update",
@@ -116,9 +202,7 @@
           "pop_ups"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.create",
@@ -126,24 +210,23 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title",
+          "artist_name",
+          "creation_date",
+          "medium",
           "popup_content"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::pop-up.pop-up",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
@@ -151,15 +234,16 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title",
+          "artist_name",
+          "creation_date",
+          "medium",
           "popup_content"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.update",
@@ -167,15 +251,16 @@
       "subject": "api::pop-up.pop-up",
       "properties": {
         "fields": [
+          "work_title",
           "popup_size",
           "popup_position",
-          "work_title",
+          "artist_name",
+          "creation_date",
+          "medium",
           "popup_content"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.create",
@@ -191,27 +276,21 @@
           "events"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::project.project",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::project.project",
       "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.read",
@@ -227,9 +306,7 @@
           "events"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::content-manager.explorer.update",
@@ -245,9 +322,7 @@
           "events"
         ]
       },
-      "conditions": [
-        "admin::is-creator"
-      ]
+      "conditions": []
     },
     {
       "action": "plugin::upload.assets.copy-link",

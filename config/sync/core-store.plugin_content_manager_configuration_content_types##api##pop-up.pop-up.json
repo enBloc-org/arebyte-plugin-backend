@@ -193,28 +193,14 @@
     "layouts": {
       "list": [
         "id",
-        "createdAt",
         "work_title",
+        "createdAt",
         "exeternal_link"
       ],
       "edit": [
         [
           {
-            "name": "popup_size",
-            "size": 6
-          },
-          {
-            "name": "popup_position",
-            "size": 6
-          }
-        ],
-        [
-          {
             "name": "work_title",
-            "size": 6
-          },
-          {
-            "name": "exeternal_link",
             "size": 6
           }
         ],
@@ -236,8 +222,24 @@
         ],
         [
           {
+            "name": "popup_position",
+            "size": 6
+          },
+          {
+            "name": "popup_size",
+            "size": 6
+          }
+        ],
+        [
+          {
             "name": "popup_content",
             "size": 12
+          }
+        ],
+        [
+          {
+            "name": "exeternal_link",
+            "size": 6
           }
         ]
       ]

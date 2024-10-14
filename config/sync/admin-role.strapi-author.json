@@ -1,7 +1,7 @@
 {
-  "name": "Arebyte Admin",
+  "name": "Author",
   "code": "strapi-author",
-  "description": "Arebyte team to manage and moderate content",
+  "description": "Authors can manage the content they have created.",
   "permissions": [
     {
       "action": "plugin::content-manager.explorer.create",
@@ -10,53 +10,61 @@
       "properties": {
         "fields": [
           "is_quiet",
-          "playlist",
           "event_time",
+          "users_permissions_user",
           "project_id",
           "current_index",
           "is_paused"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::audience-member.audience-member",
       "properties": {},
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::audience-member.audience-member",
-      "properties": {
-        "fields": [
-          "is_quiet",
-          "playlist",
-          "event_time",
-          "project_id",
-          "current_index",
-          "is_paused"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
       "actionParameters": {},
       "subject": "api::audience-member.audience-member",
       "properties": {
         "fields": [
           "is_quiet",
-          "playlist",
           "event_time",
+          "users_permissions_user",
           "project_id",
           "current_index",
           "is_paused"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::audience-member.audience-member",
+      "properties": {
+        "fields": [
+          "is_quiet",
+          "event_time",
+          "users_permissions_user",
+          "project_id",
+          "current_index",
+          "is_paused"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.create",
@@ -68,21 +76,18 @@
           "projects"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::content-creator.content-creator",
       "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::content-creator.content-creator",
-      "properties": {},
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.read",
@@ -94,7 +99,9 @@
           "projects"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.update",
@@ -106,7 +113,60 @@
           "projects"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {
+        "fields": [
+          "project",
+          "event_time"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {
+        "fields": [
+          "project",
+          "event_time"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::current-project.current-project",
+      "properties": {
+        "fields": [
+          "project",
+          "event_time"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.create",
@@ -114,17 +174,23 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "in_project",
+          "pop_ups"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::event.event",
       "properties": {},
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.read",
@@ -132,10 +198,14 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "in_project",
+          "pop_ups"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.update",
@@ -143,10 +213,80 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "in_project",
+          "pop_ups"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.create",
@@ -162,21 +302,18 @@
           "events"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.delete",
       "actionParameters": {},
       "subject": "api::project.project",
       "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
-      "actionParameters": {},
-      "subject": "api::project.project",
-      "properties": {},
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.read",
@@ -192,7 +329,9 @@
           "events"
         ]
       },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::content-manager.explorer.update",
@@ -208,71 +347,9 @@
           "events"
         ]
       },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
-      "subject": "plugin::users-permissions.user",
-      "properties": {
-        "fields": [
-          "username",
-          "email",
-          "provider",
-          "password",
-          "resetPasswordToken",
-          "confirmationToken",
-          "confirmed",
-          "blocked",
-          "role"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "plugin::users-permissions.user",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "plugin::users-permissions.user",
-      "properties": {
-        "fields": [
-          "username",
-          "email",
-          "provider",
-          "password",
-          "resetPasswordToken",
-          "confirmationToken",
-          "confirmed",
-          "blocked",
-          "role"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "plugin::users-permissions.user",
-      "properties": {
-        "fields": [
-          "username",
-          "email",
-          "provider",
-          "password",
-          "resetPasswordToken",
-          "confirmationToken",
-          "confirmed",
-          "blocked",
-          "role"
-        ]
-      },
-      "conditions": []
+      "conditions": [
+        "admin::is-creator"
+      ]
     },
     {
       "action": "plugin::upload.assets.copy-link",

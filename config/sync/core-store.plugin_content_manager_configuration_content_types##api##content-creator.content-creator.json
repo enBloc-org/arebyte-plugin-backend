@@ -122,10 +122,15 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "projects",
+        "artist_name"
+      ],
       "edit": [
         [
           {
-            "name": "artist_name",
+            "name": "projects",
             "size": 6
           }
         ],
@@ -137,15 +142,10 @@
         ],
         [
           {
-            "name": "projects",
+            "name": "artist_name",
             "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "projects",
-        "artist_name"
       ]
     },
     "uid": "api::content-creator.content-creator"
