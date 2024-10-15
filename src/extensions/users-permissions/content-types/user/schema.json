@@ -70,6 +70,14 @@
       "relation": "oneToOne",
       "target": "api::audience-member.audience-member",
       "mappedBy": "users_permissions_user"
+    },
+    "birth_date": {
+      "type": "date",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
     }
   }
 }
