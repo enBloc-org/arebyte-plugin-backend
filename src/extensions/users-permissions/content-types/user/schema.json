@@ -73,11 +73,11 @@
     },
     "birth_date": {
       "type": "date",
-      "required": true
+      "required": false
     },
     "location": {
       "type": "string",
-      "required": true
+      "required": false
     }
   }
 }

@@ -775,8 +775,8 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'oneToOne',
       'api::audience-member.audience-member'
     >;
-    birth_date: Attribute.Date & Attribute.Required;
-    location: Attribute.String & Attribute.Required;
+    birth_date: Attribute.Date;
+    location: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
