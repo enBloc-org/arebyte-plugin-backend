@@ -1,0 +1,31 @@
+meta {
+  name: update_audience-member_details
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{host}}/api/audience-members/3
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: bearer {{ApiToken}}
+}
+
+body:json {
+  {
+    "id": 3,
+    "is_quiet": false,
+    "event_time": "13:00:00.000",
+    "project_id": 3,
+    "current_index": 0,
+    "is_paused": false
+  }
+}
+
+assert {
+  res.status: eq 200
+  res.body.data.project_id: matches 3
+}
