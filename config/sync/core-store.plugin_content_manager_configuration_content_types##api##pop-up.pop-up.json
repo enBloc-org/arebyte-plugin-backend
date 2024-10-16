@@ -205,12 +205,14 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "work_title",
+        "createdAt",
+        "external_link"
+      ],
       "edit": [
         [
-          {
-            "name": "thumbnail_image",
-            "size": 6
-          },
           {
             "name": "work_title",
             "size": 6
@@ -230,10 +232,6 @@
           {
             "name": "medium",
             "size": 6
-          },
-          {
-            "name": "external_link",
-            "size": 6
           }
         ],
         [
@@ -251,13 +249,17 @@
             "name": "popup_content",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "external_link",
+            "size": 6
+          },
+          {
+            "name": "thumbnail_image",
+            "size": 6
+          }
         ]
-      ],
-      "list": [
-        "id",
-        "thumbnail_image",
-        "work_title",
-        "createdAt"
       ]
     },
     "uid": "api::pop-up.pop-up"

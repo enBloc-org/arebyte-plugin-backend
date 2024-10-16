@@ -37,6 +37,9 @@
       "action": "plugin::content-type-builder.components.getComponents"
     },
     {
+      "action": "plugin::email.email.send"
+    },
+    {
       "action": "plugin::users-permissions.auth.callback"
     },
     {

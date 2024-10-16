@@ -96,11 +96,11 @@
         ],
         [
           {
-            "name": "event_link",
+            "name": "event_date",
             "size": 6
           },
           {
-            "name": "event_date",
+            "name": "event_link",
             "size": 6
           }
         ]

@@ -178,22 +178,14 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "projects",
+        "curator_name",
+        "upcoming_events"
+      ],
       "edit": [
         [
-          {
-            "name": "curator_name",
-            "size": 6
-          },
-          {
-            "name": "curator_organisation",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "organisation_logo",
-            "size": 6
-          },
           {
             "name": "projects",
             "size": 6
@@ -207,6 +199,12 @@
         ],
         [
           {
+            "name": "curator_name",
+            "size": 6
+          }
+        ],
+        [
+          {
             "name": "upcoming_events",
             "size": 12
           }
@@ -216,13 +214,17 @@
             "name": "social_media_links",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "curator_organisation",
+            "size": 6
+          },
+          {
+            "name": "organisation_logo",
+            "size": 6
+          }
         ]
-      ],
-      "list": [
-        "id",
-        "projects",
-        "upcoming_events",
-        "curator_name"
       ]
     },
     "uid": "api::content-creator.content-creator"

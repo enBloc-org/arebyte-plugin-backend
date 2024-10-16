@@ -592,7 +592,9 @@
           "confirmed",
           "blocked",
           "role",
-          "audience_member"
+          "audience_member",
+          "birth_date",
+          "location"
         ]
       },
       "conditions": []
@@ -619,7 +621,9 @@
           "confirmed",
           "blocked",
           "role",
-          "audience_member"
+          "audience_member",
+          "birth_date",
+          "location"
         ]
       },
       "conditions": []
@@ -639,7 +643,9 @@
           "confirmed",
           "blocked",
           "role",
-          "audience_member"
+          "audience_member",
+          "birth_date",
+          "location"
         ]
       },
       "conditions": []
