@@ -10,6 +10,9 @@
       "action": "api::audience-member.audience-member.findOne"
     },
     {
+      "action": "api::audience-member.audience-member.update"
+    },
+    {
       "action": "api::content-creator.content-creator.find"
     },
     {
@@ -50,6 +53,9 @@
     },
     {
       "action": "plugin::users-permissions.user.me"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
     }
   ]
 }

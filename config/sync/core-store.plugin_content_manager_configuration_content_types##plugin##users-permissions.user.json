@@ -161,6 +161,34 @@
           "sortable": true
         }
       },
+      "birth_date": {
+        "edit": {
+          "label": "birth_date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "birth_date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "location": {
+        "edit": {
+          "label": "location",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "location",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -261,6 +289,16 @@
         [
           {
             "name": "audience_member",
+            "size": 6
+          },
+          {
+            "name": "birth_date",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "location",
             "size": 6
           }
         ]
