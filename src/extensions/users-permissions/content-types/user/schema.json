@@ -78,6 +78,33 @@
     "location": {
       "type": "string",
       "required": false
+    },
+    "project_id": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0
+    },
+    "current_index": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    },
+    "event_time": {
+      "type": "time",
+      "default": "12:00",
+      "required": true
+    },
+    "is_paused": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "favourites": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pop-up.pop-up"
     }
   }
 }

@@ -777,6 +777,35 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
     >;
     birth_date: Attribute.Date;
     location: Attribute.String;
+    project_id: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Attribute.DefaultTo<0>;
+    current_index: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      > &
+      Attribute.DefaultTo<0>;
+    event_time: Attribute.Time &
+      Attribute.Required &
+      Attribute.DefaultTo<'12:00'>;
+    is_paused: Attribute.Boolean &
+      Attribute.Required &
+      Attribute.DefaultTo<false>;
+    favourites: Attribute.Relation<
+      'plugin::users-permissions.user',
+      'oneToMany',
+      'api::pop-up.pop-up'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
