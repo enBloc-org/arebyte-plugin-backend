@@ -770,11 +770,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       'manyToOne',
       'plugin::users-permissions.role'
     >;
-    audience_member: Attribute.Relation<
-      'plugin::users-permissions.user',
-      'oneToOne',
-      'api::audience-member.audience-member'
-    >;
     birth_date: Attribute.Date;
     location: Attribute.String;
     project_id: Attribute.Integer &
@@ -816,58 +811,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'plugin::users-permissions.user',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiAudienceMemberAudienceMember extends Schema.CollectionType {
-  collectionName: 'audience_members';
-  info: {
-    singularName: 'audience-member';
-    pluralName: 'audience-members';
-    displayName: 'audience_member';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    is_quiet: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    favourites: Attribute.Relation<
-      'api::audience-member.audience-member',
-      'oneToMany',
-      'api::pop-up.pop-up'
-    >;
-    event_time: Attribute.Time &
-      Attribute.Required &
-      Attribute.DefaultTo<'12:00'>;
-    users_permissions_user: Attribute.Relation<
-      'api::audience-member.audience-member',
-      'oneToOne',
-      'plugin::users-permissions.user'
-    >;
-    project_id: Attribute.Integer & Attribute.Required;
-    current_index: Attribute.Integer &
-      Attribute.Required &
-      Attribute.DefaultTo<0>;
-    is_paused: Attribute.Boolean &
-      Attribute.Required &
-      Attribute.DefaultTo<false>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::audience-member.audience-member',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::audience-member.audience-member',
       'oneToOne',
       'admin::user'
     > &
@@ -1133,7 +1076,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::audience-member.audience-member': ApiAudienceMemberAudienceMember;
       'api::content-creator.content-creator': ApiContentCreatorContentCreator;
       'api::current-project.current-project': ApiCurrentProjectCurrentProject;
       'api::event.event': ApiEventEvent;
