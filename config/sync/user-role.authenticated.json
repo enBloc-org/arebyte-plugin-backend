@@ -4,12 +4,6 @@
   "type": "authenticated",
   "permissions": [
     {
-      "action": "api::audience-member.audience-member.find"
-    },
-    {
-      "action": "api::audience-member.audience-member.findOne"
-    },
-    {
       "action": "api::content-creator.content-creator.find"
     },
     {
@@ -40,16 +34,31 @@
       "action": "plugin::users-permissions.auth.changePassword"
     },
     {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
       "action": "plugin::users-permissions.role.find"
     },
     {
       "action": "plugin::users-permissions.role.findOne"
     },
     {
+      "action": "plugin::users-permissions.user.create"
+    },
+    {
+      "action": "plugin::users-permissions.user.destroy"
+    },
+    {
       "action": "plugin::users-permissions.user.findOne"
     },
     {
       "action": "plugin::users-permissions.user.me"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
     }
   ]
 }

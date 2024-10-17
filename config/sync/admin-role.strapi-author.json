@@ -6,58 +6,6 @@
     {
       "action": "plugin::content-manager.explorer.create",
       "actionParameters": {},
-      "subject": "api::audience-member.audience-member",
-      "properties": {
-        "fields": [
-          "is_quiet",
-          "event_time",
-          "project_id",
-          "current_index",
-          "is_paused"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::audience-member.audience-member",
-      "properties": {},
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.read",
-      "actionParameters": {},
-      "subject": "api::audience-member.audience-member",
-      "properties": {
-        "fields": [
-          "is_quiet",
-          "event_time",
-          "project_id",
-          "current_index",
-          "is_paused"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.update",
-      "actionParameters": {},
-      "subject": "api::audience-member.audience-member",
-      "properties": {
-        "fields": [
-          "is_quiet",
-          "event_time",
-          "project_id",
-          "current_index",
-          "is_paused"
-        ]
-      },
-      "conditions": []
-    },
-    {
-      "action": "plugin::content-manager.explorer.create",
-      "actionParameters": {},
       "subject": "api::content-creator.content-creator",
       "properties": {
         "fields": [
@@ -221,7 +169,11 @@
           "confirmationToken",
           "confirmed",
           "blocked",
-          "role"
+          "role",
+          "project_id",
+          "current_index",
+          "event_time",
+          "is_paused"
         ]
       },
       "conditions": []
@@ -247,7 +199,11 @@
           "confirmationToken",
           "confirmed",
           "blocked",
-          "role"
+          "role",
+          "project_id",
+          "current_index",
+          "event_time",
+          "is_paused"
         ]
       },
       "conditions": []
@@ -266,7 +222,11 @@
           "confirmationToken",
           "confirmed",
           "blocked",
-          "role"
+          "role",
+          "project_id",
+          "current_index",
+          "event_time",
+          "is_paused"
         ]
       },
       "conditions": []
