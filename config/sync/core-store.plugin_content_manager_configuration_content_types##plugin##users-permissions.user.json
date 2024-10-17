@@ -146,19 +146,103 @@
           "sortable": true
         }
       },
-      "audience_member": {
+      "birth_date": {
         "edit": {
-          "label": "audience_member",
+          "label": "birth_date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "birth_date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "location": {
+        "edit": {
+          "label": "location",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "location",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "project_id": {
+        "edit": {
+          "label": "project_id",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "project_id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "current_index": {
+        "edit": {
+          "label": "current_index",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "current_index",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "event_time": {
+        "edit": {
+          "label": "event_time",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "event_time",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "is_paused": {
+        "edit": {
+          "label": "is_paused",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "is_paused",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "favourites": {
+        "edit": {
+          "label": "favourites",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true,
-          "mainField": "id"
+          "mainField": "work_title"
         },
         "list": {
-          "label": "audience_member",
-          "searchable": true,
-          "sortable": true
+          "label": "favourites",
+          "searchable": false,
+          "sortable": false
         }
       },
       "createdAt": {
@@ -260,7 +344,37 @@
         ],
         [
           {
-            "name": "audience_member",
+            "name": "birth_date",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "location",
+            "size": 6
+          },
+          {
+            "name": "project_id",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "current_index",
+            "size": 4
+          },
+          {
+            "name": "event_time",
+            "size": 4
+          },
+          {
+            "name": "is_paused",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "favourites",
             "size": 6
           }
         ]
