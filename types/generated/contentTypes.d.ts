@@ -836,7 +836,7 @@ export interface ApiContentCreatorContentCreator extends Schema.CollectionType {
       'oneToMany',
       'api::project.project'
     >;
-    curator_name: Attribute.String;
+    curator_name: Attribute.String & Attribute.Required;
     upcoming_events: Attribute.Component<'piece.upcoming-event', true> &
       Attribute.SetMinMax<
         {
