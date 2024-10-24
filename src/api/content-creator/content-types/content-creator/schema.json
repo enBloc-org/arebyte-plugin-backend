@@ -23,7 +23,8 @@
       "mappedBy": "content_creator"
     },
     "curator_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "upcoming_events": {
       "type": "component",

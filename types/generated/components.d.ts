@@ -62,8 +62,7 @@ export interface PiecePiece extends Schema.Component {
     description: '';
   };
   attributes: {
-    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
-      Attribute.Required;
+    media: Attribute.Media<'images' | 'videos'> & Attribute.Required;
     description: Attribute.Blocks;
   };
 }
