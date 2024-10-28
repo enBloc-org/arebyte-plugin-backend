@@ -994,9 +994,7 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
         },
         number
       >;
-    thumbnail_image: Attribute.Media<'images'> &
-      Attribute.Required &
-      Attribute.Private;
+    thumbnail_image: Attribute.Media<'images'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
