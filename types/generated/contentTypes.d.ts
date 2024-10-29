@@ -1038,6 +1038,11 @@ export interface ApiProjectProject extends Schema.CollectionType {
       'oneToMany',
       'api::event.event'
     >;
+    tags: Attribute.Relation<
+      'api::project.project',
+      'manyToMany',
+      'api::tag.tag'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1052,6 +1057,38 @@ export interface ApiProjectProject extends Schema.CollectionType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiTagTag extends Schema.CollectionType {
+  collectionName: 'tags';
+  info: {
+    singularName: 'tag';
+    pluralName: 'tags';
+    displayName: 'tag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.Unique &
+      Attribute.SetMinMaxLength<{
+        minLength: 1;
+      }>;
+    projects: Attribute.Relation<
+      'api::tag.tag',
+      'manyToMany',
+      'api::project.project'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::tag.tag', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1079,6 +1116,7 @@ declare module '@strapi/types' {
       'api::event.event': ApiEventEvent;
       'api::pop-up.pop-up': ApiPopUpPopUp;
       'api::project.project': ApiProjectProject;
+      'api::tag.tag': ApiTagTag;
     }
   }
 }

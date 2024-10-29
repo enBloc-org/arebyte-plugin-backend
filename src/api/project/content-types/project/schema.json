@@ -43,6 +43,12 @@
       "relation": "oneToMany",
       "target": "api::event.event",
       "mappedBy": "in_project"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "projects"
     }
   }
 }
