@@ -50,8 +50,7 @@
       "properties": {
         "fields": [
           "bio",
-          "projects",
-          "curator_name"
+          "projects"
         ]
       },
       "conditions": []
@@ -92,6 +91,70 @@
       "properties": {
         "fields": [
           "title"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "external_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content",
+          "thumbnail_image"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "external_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content",
+          "thumbnail_image"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "external_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content",
+          "thumbnail_image"
         ]
       },
       "conditions": []

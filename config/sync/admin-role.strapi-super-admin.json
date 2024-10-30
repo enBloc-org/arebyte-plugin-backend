@@ -301,7 +301,8 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
         ]
       },
       "conditions": []
@@ -331,7 +332,8 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
         ]
       },
       "conditions": []
@@ -347,7 +349,58 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
         ]
       },
       "conditions": []
