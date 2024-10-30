@@ -4,6 +4,9 @@
   "type": "public",
   "permissions": [
     {
+      "action": "api::about-page.about-page.find"
+    },
+    {
       "action": "api::content-creator.content-creator.find"
     },
     {

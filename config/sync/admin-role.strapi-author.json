@@ -10,7 +10,8 @@
       "properties": {
         "fields": [
           "bio",
-          "projects"
+          "projects",
+          "curator_name"
         ]
       },
       "conditions": []
@@ -36,7 +37,8 @@
       "properties": {
         "fields": [
           "bio",
-          "projects"
+          "projects",
+          "curator_name"
         ]
       },
       "conditions": []
@@ -48,7 +50,8 @@
       "properties": {
         "fields": [
           "bio",
-          "projects"
+          "projects",
+          "curator_name"
         ]
       },
       "conditions": []
