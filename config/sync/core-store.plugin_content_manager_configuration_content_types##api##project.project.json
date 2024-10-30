@@ -105,6 +105,21 @@
           "sortable": false
         }
       },
+      "tags": {
+        "edit": {
+          "label": "tags",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "tags",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -165,6 +180,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "id",
+        "title",
+        "launch_date",
+        "cover_image"
+      ],
       "edit": [
         [
           {
@@ -192,14 +213,12 @@
           {
             "name": "launch_date",
             "size": 4
+          },
+          {
+            "name": "tags",
+            "size": 6
           }
         ]
-      ],
-      "list": [
-        "id",
-        "title",
-        "launch_date",
-        "cover_image"
       ]
     },
     "uid": "api::project.project"
