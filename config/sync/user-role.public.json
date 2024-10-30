@@ -31,12 +31,6 @@
       "action": "api::project.project.findOne"
     },
     {
-      "action": "api::tag.tag.find"
-    },
-    {
-      "action": "api::tag.tag.findOne"
-    },
-    {
       "action": "plugin::content-type-builder.components.getComponent"
     },
     {

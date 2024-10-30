@@ -111,8 +111,8 @@
       "list": [
         "id",
         "name",
-        "createdAt",
-        "updatedAt"
+        "projects",
+        "createdAt"
       ],
       "edit": [
         [
