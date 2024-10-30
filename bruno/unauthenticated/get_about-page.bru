@@ -1,0 +1,16 @@
+meta {
+  name: get_about-page
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/api/about-page
+  body: none
+  auth: none
+}
+
+assert {
+  res.body: isDefined
+  res.body.data.abstract: contains "arebyte Plugin"
+}
