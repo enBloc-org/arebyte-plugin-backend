@@ -1,0 +1,16 @@
+meta {
+  name: get_project_tags
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/api/tags?fields[0]=id&fields[1]=name
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+  res.body.data: isDefined
+}
