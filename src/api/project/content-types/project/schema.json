@@ -38,7 +38,7 @@
       "target": "api::content-creator.content-creator",
       "inversedBy": "projects"
     },
-    "events": {
+    "sequence": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::event.event",

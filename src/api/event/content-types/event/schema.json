@@ -16,16 +16,16 @@
       "type": "string",
       "required": true
     },
-    "in_project": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "events"
-    },
     "pop_ups": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::pop-up.pop-up"
+    },
+    "in_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "sequence"
     }
   }
 }

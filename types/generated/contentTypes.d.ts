@@ -954,15 +954,15 @@ export interface ApiEventEvent extends Schema.CollectionType {
   };
   attributes: {
     title: Attribute.String & Attribute.Required;
-    in_project: Attribute.Relation<
-      'api::event.event',
-      'manyToOne',
-      'api::project.project'
-    >;
     pop_ups: Attribute.Relation<
       'api::event.event',
       'oneToMany',
       'api::pop-up.pop-up'
+    >;
+    in_project: Attribute.Relation<
+      'api::event.event',
+      'manyToOne',
+      'api::project.project'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1065,7 +1065,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
       'manyToOne',
       'api::content-creator.content-creator'
     >;
-    events: Attribute.Relation<
+    sequence: Attribute.Relation<
       'api::project.project',
       'oneToMany',
       'api::event.event'
