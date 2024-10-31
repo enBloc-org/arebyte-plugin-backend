@@ -11,7 +11,15 @@
         "fields": [
           "bio",
           "projects",
-          "curator_name"
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "upcoming_events.event_link",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
         ]
       },
       "conditions": []
@@ -38,7 +46,15 @@
         "fields": [
           "bio",
           "projects",
-          "curator_name"
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "upcoming_events.event_link",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
         ]
       },
       "conditions": []
@@ -50,7 +66,16 @@
       "properties": {
         "fields": [
           "bio",
-          "projects"
+          "projects",
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "upcoming_events.event_link",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
         ]
       },
       "conditions": []
@@ -61,7 +86,9 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "in_project",
+          "pop_ups"
         ]
       },
       "conditions": []
@@ -79,7 +106,9 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "in_project",
+          "pop_ups"
         ]
       },
       "conditions": []
@@ -90,7 +119,9 @@
       "subject": "api::event.event",
       "properties": {
         "fields": [
-          "title"
+          "title",
+          "in_project",
+          "pop_ups"
         ]
       },
       "conditions": []
@@ -170,7 +201,8 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
         ]
       },
       "conditions": []
@@ -200,7 +232,8 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
         ]
       },
       "conditions": []
@@ -216,7 +249,58 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
         ]
       },
       "conditions": []
@@ -228,11 +312,7 @@
       "properties": {
         "fields": [
           "username",
-          "email",
           "provider",
-          "password",
-          "resetPasswordToken",
-          "confirmationToken",
           "confirmed",
           "blocked",
           "role",
@@ -241,7 +321,9 @@
           "project_id",
           "current_index",
           "event_time",
-          "is_paused"
+          "is_paused",
+          "favourites",
+          "email"
         ]
       },
       "conditions": []
@@ -260,11 +342,7 @@
       "properties": {
         "fields": [
           "username",
-          "email",
           "provider",
-          "password",
-          "resetPasswordToken",
-          "confirmationToken",
           "confirmed",
           "blocked",
           "role",
@@ -273,7 +351,9 @@
           "project_id",
           "current_index",
           "event_time",
-          "is_paused"
+          "is_paused",
+          "favourites",
+          "email"
         ]
       },
       "conditions": []
@@ -285,11 +365,7 @@
       "properties": {
         "fields": [
           "username",
-          "email",
           "provider",
-          "password",
-          "resetPasswordToken",
-          "confirmationToken",
           "confirmed",
           "blocked",
           "role",
@@ -298,7 +374,9 @@
           "project_id",
           "current_index",
           "event_time",
-          "is_paused"
+          "is_paused",
+          "favourites",
+          "email"
         ]
       },
       "conditions": []

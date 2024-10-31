@@ -224,7 +224,8 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
         ]
       },
       "conditions": [
@@ -233,15 +234,6 @@
     },
     {
       "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::project.project",
-      "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::project.project",
       "properties": {},
@@ -260,7 +252,8 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
         ]
       },
       "conditions": [
@@ -278,12 +271,25 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "events",
+          "tags"
         ]
       },
       "conditions": [
         "admin::is-creator"
       ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
+        ]
+      },
+      "conditions": []
     },
     {
       "action": "plugin::upload.assets.copy-link",
