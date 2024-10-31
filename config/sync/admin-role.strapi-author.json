@@ -87,8 +87,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": []
@@ -107,8 +107,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": []
@@ -120,8 +120,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": []
@@ -201,7 +201,7 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events",
+          "sequence",
           "tags"
         ]
       },
@@ -232,7 +232,7 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events",
+          "sequence",
           "tags"
         ]
       },
@@ -249,7 +249,7 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events",
+          "sequence",
           "tags"
         ]
       },
@@ -312,6 +312,7 @@
       "properties": {
         "fields": [
           "username",
+          "email",
           "provider",
           "confirmed",
           "blocked",
@@ -322,8 +323,7 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites",
-          "email"
+          "favourites"
         ]
       },
       "conditions": []
@@ -342,6 +342,7 @@
       "properties": {
         "fields": [
           "username",
+          "email",
           "provider",
           "confirmed",
           "blocked",
@@ -352,8 +353,7 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites",
-          "email"
+          "favourites"
         ]
       },
       "conditions": []
@@ -365,6 +365,7 @@
       "properties": {
         "fields": [
           "username",
+          "email",
           "provider",
           "confirmed",
           "blocked",
@@ -375,8 +376,7 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites",
-          "email"
+          "favourites"
         ]
       },
       "conditions": []

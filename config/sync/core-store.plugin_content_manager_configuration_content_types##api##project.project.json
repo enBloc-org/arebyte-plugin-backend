@@ -90,9 +90,9 @@
           "sortable": true
         }
       },
-      "events": {
+      "sequence": {
         "edit": {
-          "label": "events",
+          "label": "sequence",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -100,7 +100,7 @@
           "mainField": "title"
         },
         "list": {
-          "label": "events",
+          "label": "sequence",
           "searchable": false,
           "sortable": false
         }
@@ -199,7 +199,7 @@
         ],
         [
           {
-            "name": "events",
+            "name": "sequence",
             "size": 6
           },
           {
