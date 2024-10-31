@@ -90,9 +90,9 @@
           "sortable": true
         }
       },
-      "events": {
+      "sequence": {
         "edit": {
-          "label": "events",
+          "label": "sequence",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -100,7 +100,7 @@
           "mainField": "title"
         },
         "list": {
-          "label": "events",
+          "label": "sequence",
           "searchable": false,
           "sortable": false
         }
@@ -180,18 +180,8 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "title",
-        "launch_date",
-        "cover_image"
-      ],
       "edit": [
         [
-          {
-            "name": "title",
-            "size": 6
-          },
           {
             "name": "cover_image",
             "size": 6
@@ -199,7 +189,21 @@
         ],
         [
           {
-            "name": "events",
+            "name": "title",
+            "size": 6
+          },
+          {
+            "name": "launch_date",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "sequence",
+            "size": 6
+          },
+          {
+            "name": "tags",
             "size": 6
           }
         ],
@@ -208,17 +212,13 @@
             "name": "description",
             "size": 12
           }
-        ],
-        [
-          {
-            "name": "launch_date",
-            "size": 4
-          },
-          {
-            "name": "tags",
-            "size": 6
-          }
         ]
+      ],
+      "list": [
+        "id",
+        "title",
+        "launch_date",
+        "cover_image"
       ]
     },
     "uid": "api::project.project"

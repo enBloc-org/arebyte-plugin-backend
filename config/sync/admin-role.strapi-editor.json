@@ -94,8 +94,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": [
@@ -118,8 +118,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": [
@@ -133,8 +133,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": [
@@ -224,7 +224,8 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "sequence",
+          "tags"
         ]
       },
       "conditions": [
@@ -233,15 +234,6 @@
     },
     {
       "action": "plugin::content-manager.explorer.delete",
-      "actionParameters": {},
-      "subject": "api::project.project",
-      "properties": {},
-      "conditions": [
-        "admin::is-creator"
-      ]
-    },
-    {
-      "action": "plugin::content-manager.explorer.publish",
       "actionParameters": {},
       "subject": "api::project.project",
       "properties": {},
@@ -260,7 +252,8 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "sequence",
+          "tags"
         ]
       },
       "conditions": [
@@ -278,12 +271,25 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events"
+          "sequence",
+          "tags"
         ]
       },
       "conditions": [
         "admin::is-creator"
       ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
+        ]
+      },
+      "conditions": []
     },
     {
       "action": "plugin::upload.assets.copy-link",

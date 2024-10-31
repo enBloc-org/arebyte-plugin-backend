@@ -187,8 +187,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": []
@@ -207,8 +207,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": []
@@ -220,8 +220,8 @@
       "properties": {
         "fields": [
           "title",
-          "in_project",
-          "pop_ups"
+          "pop_ups",
+          "in_project"
         ]
       },
       "conditions": []
@@ -301,7 +301,7 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events",
+          "sequence",
           "tags"
         ]
       },
@@ -332,7 +332,7 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events",
+          "sequence",
           "tags"
         ]
       },
@@ -349,7 +349,7 @@
           "launch_date",
           "cover_image",
           "content_creator",
-          "events",
+          "sequence",
           "tags"
         ]
       },

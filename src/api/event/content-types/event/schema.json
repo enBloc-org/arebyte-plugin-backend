@@ -4,7 +4,7 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "event",
+    "displayName": "Sequence",
     "description": ""
   },
   "options": {
@@ -16,16 +16,16 @@
       "type": "string",
       "required": true
     },
-    "in_project": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "events"
-    },
     "pop_ups": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::pop-up.pop-up"
+    },
+    "in_project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "sequence"
     }
   }
 }
