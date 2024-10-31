@@ -45,7 +45,8 @@
       "type": "string"
     },
     "artist_name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "creation_date": {
       "type": "string"

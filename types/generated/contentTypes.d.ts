@@ -1013,7 +1013,7 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
     > &
       Attribute.Required;
     external_link: Attribute.String;
-    artist_name: Attribute.String;
+    artist_name: Attribute.String & Attribute.Required;
     creation_date: Attribute.String;
     medium: Attribute.String;
     popup_content: Attribute.DynamicZone<
