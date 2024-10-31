@@ -1,36 +1,43 @@
 {
-  "name": "my-strapi-project",
-  "private": true,
+  "name": "arebyte-plugin-backend",
   "version": "0.1.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi",
-    "deploy": "strapi deploy"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "@strapi/strapi": "4.25.11",
-    "@strapi/plugin-users-permissions": "4.25.11",
-    "@strapi/plugin-i18n": "4.25.11",
-    "@strapi/plugin-cloud": "4.25.11",
-    "better-sqlite3": "8.6.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "5.3.4",
-    "styled-components": "5.3.3"
-  },
+  "private": true,
+  "description": "A CMS for the Arebyte plugin",
+  "license": "MIT",
   "author": {
     "name": "A Strapi developer"
   },
-  "strapi": {
-    "uuid": "f528a0a3-5cb7-47bc-9aef-bf6e6b87957e"
+  "scripts": {
+    "build": "strapi build",
+    "deploy": "strapi deploy",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "test": "cd bruno && npx bru run --env local",
+    "cs": "config-sync"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.25.11",
+    "@strapi/plugin-i18n": "4.25.11",
+    "@strapi/plugin-users-permissions": "4.25.11",
+    "@strapi/strapi": "4.25.11",
+    "better-sqlite3": "8.6.0",
+    "pg": "^8.13.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "strapi-plugin-config-sync": "^1.2.6",
+    "strapi-plugin-transformer": "^3.1.2",
+    "styled-components": "5.3.3"
+  },
+  "devDependencies": {
+    "@usebruno/cli": "^1.29.0"
   },
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "f528a0a3-5cb7-47bc-9aef-bf6e6b87957e"
+  }
 }

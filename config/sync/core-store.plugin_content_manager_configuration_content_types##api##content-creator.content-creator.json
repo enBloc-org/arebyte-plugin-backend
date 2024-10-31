@@ -1,0 +1,233 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::content-creator.content-creator",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bio": {
+        "edit": {
+          "label": "bio",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bio",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "projects": {
+        "edit": {
+          "label": "projects",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "title"
+        },
+        "list": {
+          "label": "projects",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "curator_name": {
+        "edit": {
+          "label": "curator_name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "curator_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "upcoming_events": {
+        "edit": {
+          "label": "upcoming_events",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "upcoming_events",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "social_media_links": {
+        "edit": {
+          "label": "social_media_links",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "social_media_links",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "curator_organisation": {
+        "edit": {
+          "label": "curator_organisation",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "curator_organisation",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "organisation_logo": {
+        "edit": {
+          "label": "organisation_logo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "organisation_logo",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "curator_name",
+            "size": 6
+          },
+          {
+            "name": "curator_organisation",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "organisation_logo",
+            "size": 6
+          },
+          {
+            "name": "projects",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "bio",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "upcoming_events",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "social_media_links",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "projects",
+        "upcoming_events",
+        "curator_name"
+      ]
+    },
+    "uid": "api::content-creator.content-creator"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

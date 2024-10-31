@@ -1,0 +1,268 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::pop-up.pop-up",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "work_title",
+      "defaultSortBy": "work_title",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "work_title": {
+        "edit": {
+          "label": "work_title",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "work_title",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "popup_size": {
+        "edit": {
+          "label": "popup_size",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "popup_size",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "popup_position": {
+        "edit": {
+          "label": "popup_position",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "popup_position",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "external_link": {
+        "edit": {
+          "label": "external_link",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "external_link",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "artist_name": {
+        "edit": {
+          "label": "artist_name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "artist_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "creation_date": {
+        "edit": {
+          "label": "creation_date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "creation_date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "medium": {
+        "edit": {
+          "label": "medium",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "medium",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "popup_content": {
+        "edit": {
+          "label": "popup_content",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "popup_content",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "thumbnail_image": {
+        "edit": {
+          "label": "thumbnail_image",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "thumbnail_image",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "thumbnail_image",
+            "size": 6
+          },
+          {
+            "name": "work_title",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "artist_name",
+            "size": 6
+          },
+          {
+            "name": "creation_date",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "medium",
+            "size": 6
+          },
+          {
+            "name": "external_link",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "popup_position",
+            "size": 6
+          },
+          {
+            "name": "popup_size",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "popup_content",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "thumbnail_image",
+        "work_title",
+        "createdAt"
+      ]
+    },
+    "uid": "api::pop-up.pop-up"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,337 @@
+{
+  "name": "Content Creator",
+  "code": "strapi-editor",
+  "description": "Editors can manage and publish contents including those of other users.",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::content-creator.content-creator",
+      "properties": {
+        "fields": [
+          "bio",
+          "projects",
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::content-creator.content-creator",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "actionParameters": {},
+      "subject": "api::content-creator.content-creator",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::content-creator.content-creator",
+      "properties": {
+        "fields": [
+          "bio",
+          "projects",
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::content-creator.content-creator",
+      "properties": {
+        "fields": [
+          "bio",
+          "projects",
+          "curator_name",
+          "upcoming_events.event_name",
+          "upcoming_events.event_location",
+          "upcoming_events.event_date",
+          "social_media_links.platform",
+          "social_media_links.link_url",
+          "curator_organisation",
+          "organisation_logo"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "pop_ups",
+          "in_project"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::event.event",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "pop_ups",
+          "in_project"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "title",
+          "pop_ups",
+          "in_project"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "external_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content",
+          "thumbnail_image"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "external_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content",
+          "thumbnail_image"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::pop-up.pop-up",
+      "properties": {
+        "fields": [
+          "work_title",
+          "popup_size",
+          "popup_position",
+          "external_link",
+          "artist_name",
+          "creation_date",
+          "medium",
+          "popup_content",
+          "thumbnail_image"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "launch_date",
+          "cover_image",
+          "content_creator",
+          "sequence",
+          "tags"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "launch_date",
+          "cover_image",
+          "content_creator",
+          "sequence",
+          "tags"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "actionParameters": {},
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "launch_date",
+          "cover_image",
+          "content_creator",
+          "sequence",
+          "tags"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ]
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "actionParameters": {},
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "name",
+          "projects"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.update",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.configure-view",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.read",
+      "actionParameters": {},
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    }
+  ]
+}

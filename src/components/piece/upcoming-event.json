@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_piece_upcoming_events",
+  "info": {
+    "displayName": "upcoming_event",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "event_name": {
+      "type": "string",
+      "required": true
+    },
+    "event_location": {
+      "type": "string",
+      "required": true
+    },
+    "event_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "event_link": {
+      "type": "string",
+      "regex": "^https?:\\/\\/",
+      "default": "https://"
+    }
+  }
+}

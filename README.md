@@ -1,61 +1,81 @@
-# 🚀 Getting started with Strapi
+# Arebyte-plugin-backend
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+This repo holds the codebase for the content management system to the arebyte plugin.
 
-### `develop`
+## Getting started
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+The codebase uses [strapi](https://docs.strapi.io/dev-docs/admin-panel-customization) to create a CMS. To get started with contributing to the code base you can simply run the following commands:
 
+```bash
+npm install
 ```
+```bash
 npm run develop
-# or
-yarn develop
+```
+For a deeper dive into developing with Strapi see the official documentation linked above.
+
+## Running the system configuration migration
+In order to keep out Strapi backend in sync across different environments we are using the Config Sync plugin by auto-generating configuration files.
+
+To make this easier see the script in the ```package.json```
+
+### The flow:
+If you have change configuration or permission settings you need to run the command:
+
+``` npm run cs export ```
+
+After you merge new changes:
+
+```npm run cs import``` 
+
+### Creating Admin Users
+
+Before you import the seed data please create two admin user with the role content-creators in the ```setting/administration``` panel.
+
+They should have the follow information
+
+``` 
+first name: Amelia
+last name: Flores
+username: amelia_flores
+email: artone@test.com
+password: Art1Test
+
+first name: Charlie
+last name: Radical
+username: charlie_radical
+email: arttwo@test.com
+password: Art2Test
 ```
 
-### `start`
+### Data importing and exporting for development
+As part of this project the development team has created a migration file to allow for consistent data for development and testing. This file will be included in any handover for this project, so please look there for the relevant file.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+To import the this file once you have the project up and running run:
 
-```
-npm run start
-# or
-yarn start
-```
+```npm run strapi import -- -f /path/to/my/file/arebyte-test-data.tar.gz```
 
-### `build`
+If for any reason you want to export updated versions of the data please read the official documentation on how to do so [here](https://docs.strapi.io/dev-docs/data-management/export).
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
 
-```
-npm run build
-# or
-yarn build
-```
+#### Login details for test users
+There are two authenticated users as part of this development data, to use them during development please use the following credentials:
 
-## ⚙️ Deployment
+``` 
+username: UserOne
+email: userone@test.com
+password: User1Test
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
+username: UserTwo
+email: usertwo@test.com
+password: User2Test
 ```
 
-## 📚 Learn more
+To use these credential for testing please see 
+[testing](./.github/documentation/TESTING.md).
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+## Further reading
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+For more guidance on the setup of this repo see the following documentation:
 
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+- [testing](./.github/documentation/TESTING.md)

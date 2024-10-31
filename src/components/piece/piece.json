@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_piece_pieces",
+  "info": {
+    "displayName": "media_content",
+    "icon": "expand",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

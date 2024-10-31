@@ -1,0 +1,115 @@
+{
+  "key": "plugin_content_manager_configuration_components::piece.upcoming-event",
+  "value": {
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "event_name",
+      "defaultSortBy": "event_name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "event_name": {
+        "edit": {
+          "label": "event_name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "event_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "event_location": {
+        "edit": {
+          "label": "event_location",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "event_location",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "event_date": {
+        "edit": {
+          "label": "event_date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "event_date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "event_link": {
+        "edit": {
+          "label": "event_link",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "event_link",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "event_name",
+        "event_location",
+        "event_date"
+      ],
+      "edit": [
+        [
+          {
+            "name": "event_name",
+            "size": 6
+          },
+          {
+            "name": "event_location",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "event_link",
+            "size": 6
+          },
+          {
+            "name": "event_date",
+            "size": 6
+          }
+        ]
+      ]
+    },
+    "uid": "piece.upcoming-event",
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

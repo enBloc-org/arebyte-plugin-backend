@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_piece_social_media_links",
+  "info": {
+    "displayName": "social_media_link",
+    "icon": "hashtag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "Instagram",
+        "Linkedin",
+        "Tiktok",
+        "X",
+        "Mastodon",
+        "Youtube"
+      ],
+      "required": true
+    },
+    "link_url": {
+      "type": "string",
+      "regex": "^https?:\\/\\/",
+      "required": true,
+      "default": "https://"
+    }
+  }
+}
