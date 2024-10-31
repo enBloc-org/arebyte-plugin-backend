@@ -946,7 +946,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
   info: {
     singularName: 'event';
     pluralName: 'events';
-    displayName: 'event';
+    displayName: 'Sequence';
     description: '';
   };
   options: {
@@ -986,7 +986,7 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
   info: {
     singularName: 'pop-up';
     pluralName: 'pop-ups';
-    displayName: 'pop up';
+    displayName: 'Pop-up';
     description: '';
   };
   options: {
@@ -1049,7 +1049,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
   info: {
     singularName: 'project';
     pluralName: 'projects';
-    displayName: 'project';
+    displayName: 'Project';
     description: '';
   };
   options: {
@@ -1098,7 +1098,8 @@ export interface ApiTagTag extends Schema.CollectionType {
   info: {
     singularName: 'tag';
     pluralName: 'tags';
-    displayName: 'tag';
+    displayName: 'Tag';
+    description: '';
   };
   options: {
     draftAndPublish: true;
