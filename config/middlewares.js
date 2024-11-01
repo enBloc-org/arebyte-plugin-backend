@@ -14,7 +14,12 @@ module.exports = [
             "blob:",
             "*.digitaloceanspaces.com"
           ],
-          "media-src": ["'self'", "data:", "blob:"],
+          "media-src": [
+            "'self'", 
+            "data:", 
+            "blob:",
+            "*.digitaloceanspaces.com"
+          ],
           upgradeInsecureRequests: null,
         },
       },
