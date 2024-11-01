@@ -1,5 +1,5 @@
 // path: /config/env/production/server.ts
-export default ({ env }) => ({
+module.exports = ({ env }) => ({
   proxy: true,
   url: env('APP_URL'), // Sets the public URL of the application.
   app: { 
