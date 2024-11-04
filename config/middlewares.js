@@ -21,9 +21,9 @@ module.exports = [
             "chrome-extension://*",
             "moz-extension://*"
           ],
-          "media-src": [
-            "'self'", 
-            "data:", 
+          "video-src": [
+            "'self'",
+            "data:",
             "blob:",
             "*.digitaloceanspaces.com",
             "chrome-extension://*",
