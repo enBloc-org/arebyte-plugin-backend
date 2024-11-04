@@ -17,7 +17,8 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "*.digitaloceanspaces.com",
+            "{DO_SPACE_BUCKET}.s3.{DO_SPACE_REGION}.amazonaws.com",
+            "https://{DO_SPACE_BUCKET}.s3.{DO_SPACE_REGION}.amazonaws.com",
             "chrome-extension://*",
             "moz-extension://*"
           ],
@@ -25,11 +26,8 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "*.digitaloceanspaces.com",
-            "lon1.digitaloceanspaces.com",
-            "*.lon1.digitaloceanspaces.com"
-            ,
-
+            "{DO_SPACE_BUCKET}.s3.{DO_SPACE_REGION}.amazonaws.com",
+            "https://{DO_SPACE_BUCKET}.s3.{DO_SPACE_REGION}.amazonaws.com",
             "chrome-extension://*",
             "moz-extension://*"
           ],
