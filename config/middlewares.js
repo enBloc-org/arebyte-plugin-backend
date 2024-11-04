@@ -17,7 +17,7 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "*.digitaloceanspaces.com/*",
+            "*.digitaloceanspaces.com",
             "chrome-extension://*",
             "moz-extension://*"
           ],
@@ -25,7 +25,7 @@ module.exports = [
             "'self'",
             "data:",
             "blob:",
-            "*.digitaloceanspaces.com/*",
+            "*.digitaloceanspaces.com",
             "chrome-extension://*",
             "moz-extension://*"
           ],
