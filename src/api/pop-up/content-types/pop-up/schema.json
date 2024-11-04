@@ -19,7 +19,6 @@
     "popup_size": {
       "type": "enumeration",
       "enum": [
-        "Original (size of the image)",
         "Small",
         "Medium",
         "Large"
