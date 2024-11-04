@@ -994,9 +994,7 @@ export interface ApiPopUpPopUp extends Schema.CollectionType {
   };
   attributes: {
     work_title: Attribute.String & Attribute.Required;
-    popup_size: Attribute.Enumeration<
-      ['Original (size of the image)', 'Small', 'Medium', 'Large']
-    > &
+    popup_size: Attribute.Enumeration<['Small', 'Medium', 'Large']> &
       Attribute.Required;
     popup_position: Attribute.Enumeration<
       [
