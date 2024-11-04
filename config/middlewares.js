@@ -26,6 +26,10 @@ module.exports = [
             "data:",
             "blob:",
             "*.digitaloceanspaces.com",
+            "lon1.digitaloceanspaces.com",
+            "*.lon1.digitaloceanspaces.com"
+            ,
+
             "chrome-extension://*",
             "moz-extension://*"
           ],
