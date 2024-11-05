@@ -29,9 +29,6 @@ module.exports = ({ env }) => {
           },
           region: "lon1",
           endpoint: env("DO_SPACE_ENDPOINT"),
-          baseUrl: `https://s3.${env("DO_SPACE_REGION")}.amazonaws.com/${env(
-            "DO_SPACE_BUCKET"
-          )}`,
           params: {
             Bucket: env("DO_SPACE_BUCKET"),
           },
