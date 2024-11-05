@@ -21,28 +21,29 @@ module.exports = ({ env }) => {
     },
     upload: {
       config: {
-        provider: 'aws-s3',
+        provider: "aws-s3",
         providerOptions: {
-          s3Options: {
-            accessKeyId: env('DO_SPACE_ACCESS_KEY'),
-            secretAccessKey: env('DO_SPACE_ACCESS_SECRET'),
-            region: env("DO_SPACE_REGION"),
-            params: {
-              Bucket: env('DO_SPACE_BUCKET'),
-            },
-          },   
+          credentials: {
+            accessKeyId: env("DO_SPACE_ACCESS_KEY"),
+            secretAccessKey: env("DO_SPACE_SECRET_KEY"),
+          },
+          region: "lon1",
+          endpoint: env("DO_SPACE_ENDPOINT"),
+          params: {
+            Bucket: env("DO_SPACE_BUCKET"),
+          },
         },
         actionOptions: {
           upload: {
-            ACL: null
+            ACL: null,
           },
           uploadStream: {
-            ACL: null
+            ACL: null,
           },
           delete: {},
-        }
+        },
       },
-    }  
+    },
   };
 
   return config;
