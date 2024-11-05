@@ -20,6 +20,7 @@ module.exports = ({ env }) => [
             "*.digitaloceanspaces.com",
             "chrome-extension://*",
             "moz-extension://*",
+            "market-assets.strapi.io",
           ],
           "media-src": [
             "'self'",
@@ -31,6 +32,7 @@ module.exports = ({ env }) => [
             ,
             "chrome-extension://*",
             "moz-extension://*",
+            "market-assets.strapi.io",
           ],
           "default-src": [
             "'self'",
