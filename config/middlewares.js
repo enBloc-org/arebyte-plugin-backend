@@ -1,6 +1,6 @@
-module.exports = [
-  'strapi::logger',
-  'strapi::errors',
+module.exports = ({ env }) => [
+  "strapi::logger",
+  "strapi::errors",
   {
     name: "strapi::security",
     config: {
@@ -11,7 +11,7 @@ module.exports = [
             "'self'",
             "https:",
             "chrome-extension://*",
-            "moz-extension://*"
+            "moz-extension://*",
           ],
           "img-src": [
             "'self'",
@@ -19,7 +19,7 @@ module.exports = [
             "blob:",
             "*.digitaloceanspaces.com",
             "chrome-extension://*",
-            "moz-extension://*"
+            "moz-extension://*",
           ],
           "media-src": [
             "'self'",
@@ -29,38 +29,37 @@ module.exports = [
             "lon1.digitaloceanspaces.com",
             "*.lon1.digitaloceanspaces.com"
             ,
-
             "chrome-extension://*",
-            "moz-extension://*"
+            "moz-extension://*",
           ],
           "default-src": [
             "'self'",
             "chrome-extension://*",
-            "moz-extension://*"
+            "moz-extension://*",
           ],
           "script-src": [
             "'self'",
             "'unsafe-inline'",
             "chrome-extension://*",
-            "moz-extension://*"
+            "moz-extension://*",
           ],
           upgradeInsecureRequests: null,
         },
       },
       cors: {
         enabled: true,
-        origin: ['chrome-extension://*', 'moz-extension://*'],
+        origin: ["chrome-extension://*", "moz-extension://*"],
         credentials: true,
-        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
-        headers: ['Content-Type', 'Authorization', 'Origin', 'Accept']
-      }
+        methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+        headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+      },
     },
   },
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
+  "strapi::cors",
+  "strapi::poweredBy",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
 ];
