@@ -25,6 +25,7 @@ module.exports = ({ env }) => [
             )}.amazonaws.com`,
             "chrome-extension://*",
             "moz-extension://*",
+            "market-assets.strapi.io",
           ],
           "media-src": [
             "'self'",
@@ -38,6 +39,7 @@ module.exports = ({ env }) => [
             )}.amazonaws.com`,
             "chrome-extension://*",
             "moz-extension://*",
+            "market-assets.strapi.io",
           ],
           "default-src": [
             "'self'",
