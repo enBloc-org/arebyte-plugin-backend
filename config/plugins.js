@@ -32,7 +32,6 @@ module.exports = ({ env }) => {
           params: {
             Bucket: env("DO_SPACE_BUCKET"),
           },
-          forcePathStyle: true,
         },
         actionOptions: {
           upload: {
