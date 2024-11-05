@@ -33,6 +33,7 @@ module.exports = ({ env }) => {
             Bucket: env("DO_SPACE_BUCKET"),
             ACL: "publish/read",
           },
+          forcePathStyle: true,
         },
         actionOptions: {
           upload: {
