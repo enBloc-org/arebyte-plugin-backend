@@ -31,16 +31,15 @@ module.exports = ({ env }) => {
           endpoint: env("DO_SPACE_ENDPOINT"),
           params: {
             Bucket: env("DO_SPACE_BUCKET"),
-            ACL: "publish/read",
           },
           forcePathStyle: true,
         },
         actionOptions: {
           upload: {
-            ACL: "publish/read",
+            ACL: null,
           },
           uploadStream: {
-            ACL: "publish/read",
+            ACL: null,
           },
           delete: {},
         },
