@@ -964,6 +964,16 @@ export interface ApiEventEvent extends Schema.CollectionType {
       'manyToOne',
       'api::project.project'
     >;
+    time_delay: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 0;
+          max: 10;
+        },
+        number
+      > &
+      Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
