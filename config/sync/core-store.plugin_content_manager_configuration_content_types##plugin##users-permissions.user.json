@@ -245,6 +245,20 @@
           "sortable": false
         }
       },
+      "digest_counter": {
+        "edit": {
+          "label": "digest_counter",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "digest_counter",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -376,6 +390,10 @@
           {
             "name": "favourites",
             "size": 6
+          },
+          {
+            "name": "digest_counter",
+            "size": 4
           }
         ]
       ]

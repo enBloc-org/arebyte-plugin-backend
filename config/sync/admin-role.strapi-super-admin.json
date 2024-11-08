@@ -646,7 +646,8 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites"
+          "favourites",
+          "digest_counter"
         ]
       },
       "conditions": []
@@ -679,7 +680,8 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites"
+          "favourites",
+          "digest_counter"
         ]
       },
       "conditions": []
@@ -705,7 +707,8 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites"
+          "favourites",
+          "digest_counter"
         ]
       },
       "conditions": []
