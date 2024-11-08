@@ -99,6 +99,12 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::pop-up.pop-up"
+    },
+    "digest_counter": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "required": true
     }
   }
 }
