@@ -26,6 +26,13 @@
       "relation": "manyToOne",
       "target": "api::project.project",
       "inversedBy": "sequence"
+    },
+    "time_delay": {
+      "type": "integer",
+      "default": 0,
+      "max": 10,
+      "min": 0,
+      "required": true
     }
   }
 }

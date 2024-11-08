@@ -188,7 +188,8 @@
         "fields": [
           "title",
           "pop_ups",
-          "in_project"
+          "in_project",
+          "time_delay"
         ]
       },
       "conditions": []
@@ -208,7 +209,8 @@
         "fields": [
           "title",
           "pop_ups",
-          "in_project"
+          "in_project",
+          "time_delay"
         ]
       },
       "conditions": []
@@ -221,7 +223,8 @@
         "fields": [
           "title",
           "pop_ups",
-          "in_project"
+          "in_project",
+          "time_delay"
         ]
       },
       "conditions": []
@@ -643,7 +646,8 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites"
+          "favourites",
+          "digest_counter"
         ]
       },
       "conditions": []
@@ -676,7 +680,8 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites"
+          "favourites",
+          "digest_counter"
         ]
       },
       "conditions": []
@@ -702,7 +707,8 @@
           "current_index",
           "event_time",
           "is_paused",
-          "favourites"
+          "favourites",
+          "digest_counter"
         ]
       },
       "conditions": []
