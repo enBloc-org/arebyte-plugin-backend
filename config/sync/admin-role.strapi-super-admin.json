@@ -188,7 +188,8 @@
         "fields": [
           "title",
           "pop_ups",
-          "in_project"
+          "in_project",
+          "time_delay"
         ]
       },
       "conditions": []
@@ -208,7 +209,8 @@
         "fields": [
           "title",
           "pop_ups",
-          "in_project"
+          "in_project",
+          "time_delay"
         ]
       },
       "conditions": []
@@ -221,7 +223,8 @@
         "fields": [
           "title",
           "pop_ups",
-          "in_project"
+          "in_project",
+          "time_delay"
         ]
       },
       "conditions": []

@@ -33,6 +33,21 @@
           "sortable": true
         }
       },
+      "pop_ups": {
+        "edit": {
+          "label": "pop_ups",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "work_title"
+        },
+        "list": {
+          "label": "pop_ups",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "in_project": {
         "edit": {
           "label": "in_project",
@@ -48,19 +63,18 @@
           "sortable": true
         }
       },
-      "pop_ups": {
+      "time_delay": {
         "edit": {
-          "label": "pop_ups",
+          "label": "time_delay",
           "description": "",
           "placeholder": "",
           "visible": true,
-          "editable": true,
-          "mainField": "work_title"
+          "editable": true
         },
         "list": {
-          "label": "pop_ups",
-          "searchable": false,
-          "sortable": false
+          "label": "time_delay",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -144,6 +158,12 @@
           {
             "name": "in_project",
             "size": 6
+          }
+        ],
+        [
+          {
+            "name": "time_delay",
+            "size": 4
           }
         ]
       ]
