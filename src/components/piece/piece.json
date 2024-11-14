@@ -18,6 +18,13 @@
     },
     "description": {
       "type": "blocks"
+    },
+    "aspect_ratio": {
+      "type": "enumeration",
+      "enum": [
+        "square (4:3)",
+        "rectangular (16:9)"
+      ]
     }
   }
 }
