@@ -46,12 +46,27 @@
           "searchable": false,
           "sortable": false
         }
+      },
+      "aspect_ratio": {
+        "edit": {
+          "label": "aspect_ratio",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "aspect_ratio",
+          "searchable": true,
+          "sortable": true
+        }
       }
     },
     "layouts": {
       "list": [
         "id",
-        "media"
+        "media",
+        "aspect_ratio"
       ],
       "edit": [
         [
@@ -64,6 +79,12 @@
           {
             "name": "description",
             "size": 12
+          }
+        ],
+        [
+          {
+            "name": "aspect_ratio",
+            "size": 6
           }
         ]
       ]
