@@ -64,6 +64,7 @@ export interface PiecePiece extends Schema.Component {
   attributes: {
     media: Attribute.Media<'images' | 'videos'> & Attribute.Required;
     description: Attribute.Blocks;
+    aspect_ratio: Attribute.Enumeration<['square (4:3)', 'rectangular (16:9)']>;
   };
 }
 
